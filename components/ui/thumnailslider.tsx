@@ -77,6 +77,9 @@ const artworkImages: ImageItem[] = [
   { id: 121, src: "/Assets/Posters/21.jpeg", alt: "Poster 21" },
   { id: 122, src: "/Assets/Posters/22.jpeg", alt: "Poster 22" },
   { id: 123, src: "/Assets/Posters/23.jpeg", alt: "Poster 23" },
+  { id: 124, src: "/Assets/Posters/24.jpeg", alt: "Poster 24" },
+  { id: 125, src: "/Assets/Posters/25.jpeg", alt: "Poster 25" },
+  { id: 126, src: "/Assets/Posters/26.jpeg", alt: "Poster 26" },
 ];
 
 /* ✅ Split Thumbnail Rows */

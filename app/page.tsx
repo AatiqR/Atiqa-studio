@@ -4,7 +4,7 @@ import Yotubeclient  from "../components/ui/youtuberclient"
 // import Videoportfolio from "../components/ui/PortfolioYT"
 import Thumbnailslider from "../components/ui/thumnailslider"
 // import WebSliderf from "../components/ui/webslider"
-import Casestudy from "../components/ui/Case-study"
+// import Casestudy from "../components/ui/Case-study"
 import Workflow from "../components/ui/workflow"
 import Reviews from "../components/ui/testimonial-section"
 import Service from "../components/ui/servicemaz"
@@ -25,7 +25,6 @@ export default function Home() {
       <Service/>
       <Thumbnailslider/>
       <Workflow/>
-      <Casestudy/>
       <Reviews/>
       <Benefit/>
       <Faqs />
