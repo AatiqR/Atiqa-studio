@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import { FaLinkedin, FaInstagram,} from "react-icons/fa";
 import type { IconType } from "react-icons";
 import { Mail, Phone, MapPin, ArrowRight, CheckCircle, ChevronRight, LucideIcon } from "lucide-react";
 
