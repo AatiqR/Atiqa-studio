@@ -55,6 +55,7 @@ const portfolioImages: ImageItem[] = [
   { id: 43, src: "/Assets/Thumbnail/43.jpg", alt: "Portfolio Thumbnail Image 43" },
   { id: 44, src: "/Assets/Thumbnail/44.jpg", alt: "Portfolio Thumbnail Image 44" },
   { id: 45, src: "/Assets/Thumbnail/45.jpg", alt: "Portfolio Thumbnail Image 45" },
+  { id: 46, src: "/Assets/Thumbnail/46.jpg", alt: "Portfolio Thumbnail Image 46" },
 ];
 
 /* ✅ Artwork Images (1–17) */
