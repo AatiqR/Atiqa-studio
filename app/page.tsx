@@ -1,9 +1,9 @@
 import Hero from "../components/ui/Hero"
 import Client  from "../components/ui/clientlogo"
 import Yotubeclient  from "../components/ui/youtuberclient"
-import Videoportfolio from "../components/ui/PortfolioYT"
+// import Videoportfolio from "../components/ui/PortfolioYT"
 import Thumbnailslider from "../components/ui/thumnailslider"
-import WebSliderf from "../components/ui/webslider"
+// import WebSliderf from "../components/ui/webslider"
 import Casestudy from "../components/ui/Case-study"
 import Workflow from "../components/ui/workflow"
 import Reviews from "../components/ui/testimonial-section"
@@ -23,9 +23,7 @@ export default function Home() {
       <Client/>
       <Yotubeclient/>     
       <Service/>
-      <Videoportfolio/>
       <Thumbnailslider/>
-      <WebSliderf/>
       <Workflow/>
       <Casestudy/>
       <Reviews/>

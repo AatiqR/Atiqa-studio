@@ -17,7 +17,7 @@ export default function FeaturesSection() {
             <span className="text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]">Benefits</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300">
-            What You Get By Working With Maz Digital
+            What You Get By Working With Atiqa
           </p>
         </div>
 

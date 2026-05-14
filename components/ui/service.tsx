@@ -29,7 +29,7 @@ const services = [
       "Brand consistency across all designs",
     ],
     ctaText: "Get Custom Quote",
-    waMessage: "Hi, I need Graphic Design services from Maz Digital.",
+    waMessage: "Hi, I need Graphic Design services from Atiqa.",
   },
   {
     id: "video",
@@ -62,7 +62,7 @@ const services = [
       "Step 4: Receive your polished video with revisions",
     ],
     ctaText: "Start My Project",
-    waMessage: "Hi, I need Video Editing services from Maz Digital.",
+    waMessage: "Hi, I need Video Editing services from Atiqa.",
     featured: true,
   },
   {
@@ -86,7 +86,7 @@ const services = [
       "Post-launch support & maintenance",
     ],
     ctaText: "Get Custom Quote",
-    waMessage: "Hi, I need Web Development services from Maz Digital.",
+    waMessage: "Hi, I need Web Development services from Atiqa.",
   },
 ]
 
@@ -101,7 +101,7 @@ export default function PricingSection() {
         {/* Heading */}
         <div className="text-center mb-24">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Maz Digital <span className="text-[#FFA200]">Pricing</span>
+            Atiqa <span className="text-[#FFA200]">Pricing</span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Clear, simple, and professional pricing. Designed to grow your brand.
@@ -188,7 +188,7 @@ export default function PricingSection() {
 
               {/* CTA */}
               <a
-                href={`https://wa.me/923055544729?text=${encodeURIComponent(service.waMessage)}`}
+                href={`https://wa.me/920302775191?text=${encodeURIComponent(service.waMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mt-auto bg-[#FFA200] hover:bg-orange-600

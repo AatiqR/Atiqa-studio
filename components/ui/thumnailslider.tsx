@@ -16,7 +16,7 @@ const portfolioImages: ImageItem[] = [
   { id: 4, src: "/Assets/Thumbnail/4.jpg", alt: "Portfolio Thumbnail Image 4" },
   { id: 5, src: "/Assets/Thumbnail/5.jpg", alt: "Portfolio Thumbnail Image 5" },
   { id: 6, src: "/Assets/Thumbnail/6.jpg", alt: "Portfolio Thumbnail Image 6" },
-  { id: 7, src: "/Assets/Thumbnail/7.jpeg", alt: "Portfolio Thumbnail Image 7" },
+  { id: 7, src: "/Assets/Thumbnail/7.jpg", alt: "Portfolio Thumbnail Image 7" },
   { id: 8, src: "/Assets/Thumbnail/8.jpg", alt: "Portfolio Thumbnail Image 8" },
   { id: 9, src: "/Assets/Thumbnail/9.jpg", alt: "Portfolio Thumbnail Image 9" },
   { id: 10, src: "/Assets/Thumbnail/10.jpg", alt: "Portfolio Thumbnail Image 10" },
@@ -40,6 +40,12 @@ const portfolioImages: ImageItem[] = [
   { id: 28, src: "/Assets/Thumbnail/28.jpg", alt: "Portfolio Thumbnail Image 28" },
   { id: 29, src: "/Assets/Thumbnail/29.jpeg", alt: "Portfolio Thumbnail Image 29" },
   { id: 30, src: "/Assets/Thumbnail/30.jpg", alt: "Portfolio Thumbnail Image 30" },
+
+     { id: 31, src: "/Assets/Thumbnail/31.jpg", alt: "Portfolio Thumbnail Image 26" },
+  { id: 32, src: "/Assets/Thumbnail/32.jpg", alt: "Portfolio Thumbnail Image 27" },
+  { id: 33, src: "/Assets/Thumbnail/33.jpg", alt: "Portfolio Thumbnail Image 28" },
+  { id: 34, src: "/Assets/Thumbnail/34.jpg", alt: "Portfolio Thumbnail Image 29" },
+  { id: 35, src: "/Assets/Thumbnail/35.jpg", alt: "Portfolio Thumbnail Image 30" }
 ];
 
 /* ✅ Artwork Images (1–17) */

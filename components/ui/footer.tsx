@@ -62,7 +62,7 @@ export default function Footer() {
               <div className="w-12 h-12 bg-[#ffa200] rounded-md flex items-center justify-center mr-3 shadow-[0_0_20px_rgba(255,189,0,0.6)]">
                 <span className="text-black font-bold text-4xl">M</span>
               </div>
-              <h3 className="text-white text-2xl font-bold">Maz Digital</h3>
+              <h3 className="text-white text-2xl font-bold">Atiqa</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Professional video editing, web development, and graphic design for creators and brands worldwide.
@@ -121,7 +121,7 @@ export default function Footer() {
             </h3>
 
             <a
-              href="https://wa.me/+923055544729?text=Hi,%20I’d%20like%20to%20book%20a%20free%20consultation!"
+              href="https://wa.me/+920302775191?text=Hi,%20I’d%20like%20to%20book%20a%20free%20consultation!"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between bg-[#ffa200] hover:bg-[#2cff0f] text-black font-semibold rounded-md px-5 py-3 transition-all duration-300 w-full mb-6 shadow-[0_0_20px_rgba(255,189,0,0.6)] hover:shadow-[0_0_25px_rgba(57,255,20,0.8)]"
@@ -131,9 +131,9 @@ export default function Footer() {
             </a>
 
             <div className="space-y-3 mt-5">
-              <ContactInfo icon={Phone} text="+92 0305 5544729" />
+              <ContactInfo icon={Phone} text="+92 0306 2775191" />
               <ContactInfo icon={Mail} text=" malik@mazdigital.me" />
-              <ContactInfo icon={MapPin} text="Sharjah, UAE" />
+              {/* <ContactInfo icon={MapPin} text="Sharjah, UAE" /> */}
               <ContactInfo icon={MapPin} text="Karachi, Pakistan" />
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function Footer() {
         <div className="border-t border-gray-800/50 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © Copyright {new Date().getFullYear()}{" "}
-            <span className="text-[#ffa200]">Maz Digital.</span> All rights reserved.
+            <span className="text-[#ffa200]">Atiqa.</span> All rights reserved.
           </p>
           <div className="flex items-center space-x-6">
             <FooterBottomLink text="Privacy Policy" />

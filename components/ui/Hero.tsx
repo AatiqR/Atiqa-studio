@@ -341,23 +341,27 @@ export default function Home() {
               </span>{" "} */}
                {/* Turn Your Vision Into Scroll-Stopping Content
             </h1> */}
+<h1 className="text-[2.5rem] leading-[1.08] sm:text-5xl sm:leading-[1.1] md:text-6xl lg:text-7xl xl:text-8xl font-black max-w-[90%] sm:max-w-lg md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto relative z-10 text-white tracking-tight">
+  High-Converting
+  <span className="text-[#ffa200] inline-block transition-all duration-500 break-words">
+    {" "}
+    Thumbnail Designs {" "}
+  </span>
+  That Grab Attention Instantly
+</h1>
 
- <h1 className="text-[2.5rem] leading-[1.08] sm:text-5xl sm:leading-[1.1] md:text-6xl lg:text-7xl xl:text-8xl font-black max-w-[90%] sm:max-w-lg md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto relative z-10 text-white tracking-tight">
-              Turn Your Vision Into
-              <span className="text-[#ffa200] inline-block transition-all duration-500 break-words"> Scroll-Stopping </span>{" "}
-              Content
-            </h1>
-            <p className="text-gray-200 text-base sm:text-lg md:text-xl lg:text-1xl max-w-[85%] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto relative z-10 font-medium leading-relaxed">
- We help creators, brands, and agencies bring their ideas to life through powerful video editing,
-modern web development, and captivating design
-            </p>
+<p className="text-gray-200 text-base sm:text-lg md:text-xl lg:text-[1.35rem] max-w-[85%] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto relative z-10 font-medium leading-relaxed mt-6">
+  I help creators, YouTubers, and brands grow faster with scroll-stopping
+  thumbnails, premium graphic design, posters, and social media visuals
+  designed to increase clicks, engagement, and brand visibility.
+</p>
 
             
 
          <div className="flex flex-col items-center justify-center pt-2 sm:pt-0 md:pt-0 relative z-10">
  <Button
  onClick={() => {
-    window.open("https://wa.me/923055544729?text=Hi,%20I%20would%20like%20a%20talk%20", "_blank");
+    window.open("https://wa.me/920302775191?text=Hi,%20I%20would%20like%20a%20talk%20", "_blank");
   }}
   className="relative w-[90%] sm:w-auto text-lg sm:text-lg md:text-xl py-7 sm:py-7 md:py-8 px-10 sm:px-10 md:px-12
              text-black bg-[#FFA200] border-none rounded-xl sm:rounded-lg shadow-lg
@@ -472,37 +476,67 @@ design solutions, delivered fast, clean, and stress free.
   </div> */}
 
   {/* Strip 2 – Right ➜ Left */}
-  <div className="absolute left-1/2 top-1/2 w-[120vw] -translate-x-1/2 -translate-y-1/2 ">
-    <div className="h-14 sm:h-14 md:h-16 lg:h-20 bg-[#ffa200] shadow-[0_0_0px_rgba(0,255,89,0.6)]">
-      <div className="flex items-center h-full animate-[marquee-right_5s_linear_infinite]">
-        <div className="flex items-center gap-10 whitespace-nowrap px-8">
-          {[...Array(20)].map((_, i) => (
-            <div key={i} className="flex items-center gap-10">
-              <span className="text-black font-black text-lg uppercase tracking-wider">Higher Watch Time</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-              <span className="text-black font-black text-lg uppercase tracking-wider">More Views Fast</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-              <span className="text-black font-black text-lg uppercase tracking-wider">Click Magnet Thumbnail</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-               <span className="text-black font-black text-lg uppercase tracking-wider">Scroll stopping</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-              <span className="text-black font-black text-lg uppercase tracking-wider">High Quality Leads</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-              <span className="text-black font-black text-lg uppercase tracking-wider">Sales Growth</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-              <span className="text-black font-black text-lg uppercase tracking-wider">Website That sell</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-              <span className="text-black font-black text-lg uppercase tracking-wider">High Retention Cuts</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
-              <span className="text-black font-black text-lg uppercase tracking-wider">Scroll stopping</span>
-              <div className="w-3 h-3 bg-black rotate-45" />
+ <div className="absolute left-1/2 top-1/2 w-[120vw] -translate-x-1/2 -translate-y-1/2">
+  <div className="h-14 sm:h-14 md:h-16 lg:h-20 bg-[#ffa200] shadow-[0_0_40px_rgba(255,45,85,0.35)] overflow-hidden">
+    <div className="flex items-center h-full animate-[marquee-right_18s_linear_infinite]">
+      <div className="flex items-center gap-10 whitespace-nowrap px-8">
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className="flex items-center gap-10">
+            
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              High CTR Thumbnails
+            </span>
 
-            </div>
-          ))}
-        </div>
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              Scroll-Stopping Designs
+            </span>
+
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              Premium Brand Visuals
+            </span>
+
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              Better Click Through Rate
+            </span>
+
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              Social Media Graphics
+            </span>
+
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              Modern Poster Design
+            </span>
+
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              Creative Visual Branding
+            </span>
+
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+            <span className="text-white font-black text-sm sm:text-base lg:text-lg uppercase tracking-wider">
+              Attention Grabbing Content
+            </span>
+
+            <div className="w-3 h-3 bg-white rotate-45" />
+
+          </div>
+        ))}
       </div>
     </div>
   </div>
+</div>
 
 </div>
 
