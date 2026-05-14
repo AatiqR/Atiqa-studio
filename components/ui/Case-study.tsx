@@ -108,7 +108,7 @@ export default function EcommerceLandingPage() {
       <div className="pt-5">
         <Button className="bg-[#1A2238] hover:bg-[#1A2238]/90 text-white rounded-full px-8 py-5 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
          onClick={() => {
-    window.open("https://wa.me/920302775191?text=Hi,%20I%20would%20like%20a%20youtube%20channel%20service", "_blank");
+    window.open("https://wa.me/9203062775191?text=Hi,%20I%20would%20like%20a%20youtube%20channel%20service", "_blank");
   }}
         >
           Start Your Channel Growth
@@ -234,7 +234,7 @@ export default function EcommerceLandingPage() {
   <div className="pt-5">
     <Button className="bg-[#1A2238] hover:bg-[#1A2238]/90 text-white rounded-full px-8 py-5 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
            onClick={() => {
-    window.open("https://wa.me/920302775191?text=Hi,%20I%20would%20like%20a%20personal%20brand%20service", "_blank");
+    window.open("https://wa.me/9203062775191?text=Hi,%20I%20would%20like%20a%20personal%20brand%20service", "_blank");
   }}
     >
       Grow Your Personal Brand
@@ -337,7 +337,7 @@ export default function EcommerceLandingPage() {
       <div className="pt-5">
         <Button 
                onClick={() => {
-    window.open("https://wa.me/920302775191?text=Hi,%20I%20would%20like%20a%20Website%20Service", "_blank");
+    window.open("https://wa.me/9203062775191?text=Hi,%20I%20would%20like%20a%20Website%20Service", "_blank");
   }}
         className="bg-[#1A2238] hover:bg-[#1A2238]/90 text-white rounded-full px-8 py-5 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl">
           Start My Transformation

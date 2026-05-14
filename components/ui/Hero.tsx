@@ -361,7 +361,7 @@ export default function Home() {
          <div className="flex flex-col items-center justify-center pt-2 sm:pt-0 md:pt-0 relative z-10">
  <Button
  onClick={() => {
-    window.open("https://wa.me/920302775191?text=Hi,%20I%20would%20like%20a%20talk%20", "_blank");
+    window.open("https://wa.me/9203062775191?text=Hi,%20I%20would%20like%20a%20talk%20", "_blank");
   }}
   className="relative w-[90%] sm:w-auto text-lg sm:text-lg md:text-xl py-7 sm:py-7 md:py-8 px-10 sm:px-10 md:px-12
              text-black bg-[#FFA200] border-none rounded-xl sm:rounded-lg shadow-lg

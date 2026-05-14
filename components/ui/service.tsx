@@ -188,7 +188,7 @@ export default function PricingSection() {
 
               {/* CTA */}
               <a
-                href={`https://wa.me/920302775191?text=${encodeURIComponent(service.waMessage)}`}
+                href={`https://wa.me/9203062775191?text=${encodeURIComponent(service.waMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mt-auto bg-[#FFA200] hover:bg-orange-600

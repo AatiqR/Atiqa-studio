@@ -11,27 +11,30 @@ import { useRef } from "react";
 const services = [
   {
     number: "01",
-    title: "Video Editing",
+    title: "YouTube Thumbnail Design",
     description:
-      "High-retention, scroll-stopping video edits crafted to boost watch time, increase engagement, and turn casual viewers into loyal followers and paying clients.",
+      "High CTR, scroll-stopping thumbnails designed using psychology, emotion triggers, and bold visual hierarchy to increase clicks, views, and channel growth instantly.",
   },
+
   {
     number: "02",
-    title: "Graphic Designing",
+    title: "Poster & Social Media Design",
     description:
-      "Visually striking designs and click-magnet thumbnails built to grab attention instantly, strengthen brand identity, and drive more clicks across platforms.",
+      "Eye-catching posters, ads, and social media creatives for brands, restaurants, and businesses designed to grab attention and increase engagement across all platforms.",
   },
+
   {
     number: "03",
-    title: "Website Development",
+    title: "Brand Identity Design",
     description:
-      "Fast, modern, conversion-focused websites designed to load quickly, build trust, and convert visitors into leads, bookings, and customers.",
+      "Modern branding solutions including logos, color systems, and visual identity design that help businesses look professional, trustworthy, and memorable.",
   },
+
   {
     number: "04",
-    title: "Social Media Management",
+    title: "Menu & Packaging Design",
     description:
-      "Strategic content planning, posting, and optimization to grow reach, maintain consistency, and turn social media presence into real business growth.",
+      "Premium menu layouts and product packaging designs for food brands and businesses that improve presentation, increase customer attraction, and boost sales.",
   },
 ];
 
