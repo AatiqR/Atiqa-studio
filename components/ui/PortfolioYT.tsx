@@ -194,14 +194,14 @@ const HelpSection = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white/95 backdrop-blur-sm rounded-full p-4 shadow-2xl group-hover:bg-white transition-all duration-300 group-hover:shadow-orange-500/25">
+              <div className="bg-white/95 backdrop-blur-sm rounded-full p-4 shadow-2xl group-hover:bg-white transition-all duration-300 group-hover:shadow-green-500/25">
                 <Play className="w-6 h-6 text-black fill-current ml-1" />
               </div>
             </motion.div>
 
             <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
               {!isShortForm && video.overlayText && (
-                <div className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-medium inline-block">
+                <div className="bg-green-500 text-black px-3 py-1 rounded-full text-sm font-medium inline-block">
                   {video.overlayText}
                 </div>
               )}
@@ -214,11 +214,11 @@ const HelpSection = () => {
 
   const ExploreButton = () => (
     <motion.button
-      className="relative px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-500 rounded-xl text-white font-semibold overflow-hidden group shadow-lg shadow-orange-500/25"
+      className="relative px-8 py-4 bg-gradient-to-r from-green-600 to-green-500 rounded-xl text-white font-semibold overflow-hidden group shadow-lg shadow-green-500/25"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative flex items-center gap-3">
         <span className="text-lg">Explore pricing</span>
         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -240,7 +240,7 @@ const HelpSection = () => {
             className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight"
           >
             Our  {" "}
-            <span className="bg-gradient-to-r from-orange-400 to-orange-400 bg-clip-text text-transparent italic">
+            <span className="bg-gradient-to-r from-green-400 to-green-400 bg-clip-text text-transparent italic">
               Video Editing {" "}
             </span>
             Work
@@ -288,7 +288,7 @@ production, we deliver clean, engaging, algorithm-friendly edits.
             transition={{ delay: 0.4 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-black via-black to-black rounded-3xl p-10 md:p-16 shadow-2xl border border-orange-500/10">
+            <div className="bg-gradient-to-br from-black via-black to-black rounded-3xl p-10 md:p-16 shadow-2xl border border-green-500/10">
               <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                   Short Form Videos

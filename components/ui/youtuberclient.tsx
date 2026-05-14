@@ -157,11 +157,11 @@ export default function CreatorSlider() {
                 alt={creator.name}
                 width={80}
                 height={80}
-                className="rounded-full object-cover border-2 border-orange-500"
+                className="rounded-full object-cover border-2 border-green-500"
               />
               <div>
                 <p className="text-white font-semibold text-2xl">{creator.name}</p>
-                <p className="text-orange-400 font-bold text-1xl drop-shadow-[0_0_10px_#ffa200] animate-pulse">
+                <p className="text-green-400 font-bold text-1xl drop-shadow-[0_0_10px_#39FF14] animate-pulse">
                   {creator.followers}
                 </p>
               </div>

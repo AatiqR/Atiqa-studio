@@ -10,7 +10,7 @@ export default function EcommerceLandingPage() {
 {/* 1st */}
 <div className="container mx-auto px-6 py-10 md:py-16">
  <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight text-center">
-  <span className="bg-gradient-to-r from-[#FFA200] to-[#ff8c00] bg-clip-text text-transparent animate-pulse">
+  <span className="bg-gradient-to-r from-[#39FF14] to-[#ff8c00] bg-clip-text text-transparent animate-pulse">
     Case Studies
   </span>
 </h1>
@@ -19,7 +19,7 @@ export default function EcommerceLandingPage() {
   {/* Title */}
   <div className="text-center mb-12 mt-9">
     <h2 className="text-3xl md:text-5xl font-extrabold text-[#1A2238] leading-tight tracking-tight">
-      <span className="text-[#ffa200]">GodMasterPlays</span>
+      <span className="text-[#39FF14]">GodMasterPlays</span>
       <br />
     Successful YouTube Channel in 7 Days
     </h2>
@@ -75,7 +75,7 @@ export default function EcommerceLandingPage() {
 
         <div>
           <h3 className="text-xl md:text-2xl font-bold text-[#1A2238]">🚀 The Results</h3>
-          <p className="text-[#ffa200] font-semibold leading-relaxed">
+          <p className="text-[#39FF14] font-semibold leading-relaxed">
             ✅ 1,000+ Subscribers in under 7 days <br />
             ✅ 4,000+ Watch Hours achieved <br />
             ✅ Fully Monetized in less than a week <br />
@@ -87,19 +87,19 @@ export default function EcommerceLandingPage() {
       {/* Key Contributions */}
       <div className="grid gap-2 pt-4">
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">🎬 High-Retention Video Editing</span>
         </div>
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">🧠 Strategic Script Development</span>
         </div>
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">🖼️ Click-Optimized Thumbnails</span>
         </div>
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">📈 Monetization Strategy</span>
         </div>
       </div>
@@ -127,7 +127,7 @@ export default function EcommerceLandingPage() {
   {/* Title */}
   <div className="text-center mb-12">
     <h1 className="text-3xl md:text-5xl font-extrabold text-[#1A2238] leading-tight tracking-tight">
-      <span className="text-[#ffa200]">Noor-ul-Ain</span>
+      <span className="text-[#39FF14]">Noor-ul-Ain</span>
       <br />
       Helping a Creator Find Her Voice
     </h1>
@@ -201,7 +201,7 @@ export default function EcommerceLandingPage() {
 
     <div>
       <h3 className="text-xl md:text-2xl font-bold text-[#1A2238]">🚀 The Results</h3>
-      <p className="text-[#ffa200] font-semibold leading-relaxed">
+      <p className="text-[#39FF14] font-semibold leading-relaxed">
         ✅ 1.3 Million Views on a Single Reel <br />
         ✅ 1.19 Million Monthly Content Reach <br />
         ✅ 94% Reach from Non-Followers <br />
@@ -213,19 +213,19 @@ export default function EcommerceLandingPage() {
   {/* Key Contributions */}
   <div className="grid gap-2 pt-4">
     <div className="flex items-center gap-3">
-      <Check className="h-6 w-6 text-[#ffa200]" />
+      <Check className="h-6 w-6 text-[#39FF14]" />
       <span className="text-gray-800 font-semibold">📱 Organic Growth Strategy</span>
     </div>
     <div className="flex items-center gap-3">
-      <Check className="h-6 w-6 text-[#ffa200]" />
+      <Check className="h-6 w-6 text-[#39FF14]" />
       <span className="text-gray-800 font-semibold">🎥 High-Performing Reel Optimization</span>
     </div>
     <div className="flex items-center gap-3">
-      <Check className="h-6 w-6 text-[#ffa200]" />
+      <Check className="h-6 w-6 text-[#39FF14]" />
       <span className="text-gray-800 font-semibold">🎨 Professional Brand Positioning</span>
     </div>
     <div className="flex items-center gap-3">
-      <Check className="h-6 w-6 text-[#ffa200]" />
+      <Check className="h-6 w-6 text-[#39FF14]" />
       <span className="text-gray-800 font-semibold">📈 Audience Expansion Strategy</span>
     </div>
   </div>
@@ -305,7 +305,7 @@ export default function EcommerceLandingPage() {
 
         <div>
           <h3 className="text-xl md:text-2xl font-bold text-[#1A2238]">🚀 The Results</h3>
-          <p className="text-[#ffa200] font-semibold leading-relaxed">
+          <p className="text-[#39FF14] font-semibold leading-relaxed">
             ✅ 50% more client inquiries through the website <br />
             ✅ 600+ 5★ reviews showcased to boost credibility <br />
             ✅ Trusted by major brands like EMAAR, KPMG & Dubai Police
@@ -316,19 +316,19 @@ export default function EcommerceLandingPage() {
       {/* Features */}
       <div className="grid gap-2 pt-1">
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">📱 Fully Responsive Design</span>
         </div>
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">🎥 Video Testimonials Section</span>
         </div>
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">📸 Before & After Transformations</span>
         </div>
         <div className="flex items-center gap-3">
-          <Check className="h-6 w-6 text-[#ffa200]" />
+          <Check className="h-6 w-6 text-[#39FF14]" />
           <span className="text-gray-800 font-semibold">🏆 Credibility Logos & Social Proof</span>
         </div>
       </div>

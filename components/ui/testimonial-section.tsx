@@ -39,52 +39,53 @@ export default function TestimonialSection() {
       animation: marquee-vertical-reverse var(--duration) linear infinite;
     }
   `
+
 const firstColumnTestimonials: Testimonial[] = [
   {
     name: "Daniel Brooks",
-    position: "Real Estate Consultant",
+    position: "YouTube Creator",
     quote:
-      "The video edits completely changed how my listings perform. Hooks are strong, pacing is perfect, and viewers are watching longer.",
+      "The thumbnails completely transformed my channel. CTR increased instantly and more people started clicking on my videos.",
     initial: "D",
     image: "/Assets/Reviews/user1.jpeg",
   },
   {
     name: "Sarah Mitchell",
-    position: "Online Business Coach",
+    position: "Restaurant Owner",
     quote:
-      "Every video feels intentional and professional. The edits keep my audience engaged, and I see better retention than ever.",
+      "The menu design looked premium and professional. Customers now spend more time looking at our menu and ordering more items.",
     initial: "S",
     image: "/Assets/Reviews/user2.png",
   },
   {
     name: "Anthony Rivera",
-    position: "Agency Owner",
+    position: "Food Brand Founder",
     quote:
-      "Outsourcing video editing here was a game-changer. Smooth cuts, clean pacing, and the content feels polished and professional.",
+      "Packaging designs looked clean, modern, and high-end. Our products instantly started standing out on shelves.",
     initial: "A",
     image: "/Assets/Reviews/user3.jpeg",
   },
   {
     name: "Melissa Grant",
-    position: "Personal Brand Strategist",
+    position: "Personal Brand Coach",
     quote:
-      "Short-form edits feel premium and keep viewers hooked. It’s exactly what high-quality social media content should feel like.",
+      "My LinkedIn banner and branding now look polished and premium. It gave my profile a much stronger professional identity.",
     initial: "M",
     image: "/Assets/Reviews/user4.jpeg",
   },
   {
     name: "Kevin Thompson",
-    position: "Fitness Program Founder",
+    position: "Fitness YouTuber",
     quote:
-      "Retention has improved dramatically. The video edits are smooth, fast, and keep viewers watching till the end.",
+      "The thumbnails are bold, emotional, and impossible to ignore. Views and engagement improved within days.",
     initial: "K",
     image: "/Assets/Reviews/user5.jpeg",
   },
   {
     name: "Nina Patel",
-    position: "Marketing Manager",
+    position: "Cafe Owner",
     quote:
-      "Thumbnails and graphics instantly improved our CTR. Everything looks bold, clean, and perfectly aligned with our brand.",
+      "Posters and promotional designs made our café look modern and attractive. Customers even started sharing our posters online.",
     initial: "N",
     image: "/Assets/Reviews/user6.jpeg",
   },
@@ -92,31 +93,31 @@ const firstColumnTestimonials: Testimonial[] = [
     name: "Omar Khalid",
     position: "E-commerce Brand Owner",
     quote:
-      "Graphic designs are modern and eye-catching. Our ads now perform better, and everything feels premium.",
+      "Every design feels premium and conversion-focused. Product banners and ads now grab attention instantly.",
     initial: "O",
     image: "/Assets/Reviews/user7.jpeg",
   },
   {
     name: "Laura Simmons",
-    position: "Content Manager",
+    position: "Content Creator",
     quote:
-      "Video editing quality is consistent and reliable. Every project feels thought-through, professional, and engaging.",
+      "The thumbnail designs perfectly match my niche and audience. My content finally looks professional and clickable.",
     initial: "L",
     image: "/Assets/Reviews/user8.jpeg",
   },
   {
     name: "Jason Miller",
-    position: "Startup Founder",
+    position: "Restaurant Manager",
     quote:
-      "The website they built is clean, fast, and conversion-focused. We started receiving qualified leads within weeks.",
+      "The food menu layout was clean, modern, and easy to read. It completely upgraded our restaurant presentation.",
     initial: "J",
     image: "/Assets/Reviews/user9.png",
   },
   {
     name: "Emily Rogers",
-    position: "Coaching Business Owner",
+    position: "Business Consultant",
     quote:
-      "Our website now fully reflects our brand. Simple structure, smooth experience, and very professional.",
+      "My social media posts and LinkedIn branding now feel consistent and premium. It improved my online presence massively.",
     initial: "E",
     image: "/Assets/Reviews/user10.jpeg",
   },
@@ -125,57 +126,57 @@ const firstColumnTestimonials: Testimonial[] = [
 const secondColumnTestimonials: Testimonial[] = [
   {
     name: "Hassan Malik",
-    position: "Social Media Consultant",
+    position: "Gaming YouTuber",
     quote:
-      "Video edits are crafted for results. Engagement and watch time increased significantly across all platforms.",
+      "The thumbnails are designed with real click psychology. My gaming videos now attract far more viewers.",
     initial: "H",
     image: "/Assets/Reviews2/u1.jpeg",
   },
   {
     name: "Rebecca Collins",
-    position: "Online Course Creator",
+    position: "Online Coach",
     quote:
-      "The editing style keeps viewers hooked naturally. Professional, polished, and highly effective for conversions.",
+      "Poster and banner designs gave my brand a clean and premium feel. Everything now looks professional and trustworthy.",
     initial: "R",
     image: "/Assets/Reviews2/u2.jpeg",
   },
   {
     name: "Thomas Nguyen",
-    position: "Brand Manager",
+    position: "Restaurant Founder",
     quote:
-      "Great sense of pacing, hooks, and visuals. Video edits helped us communicate our messages clearly.",
+      "The menu and food poster designs made our restaurant marketing look high-end. Customers loved the visuals.",
     initial: "T",
     image: "/Assets/Reviews2/u3.png",
   },
   {
     name: "Ayesha Rahman",
-    position: "Lifestyle Brand Founder",
+    position: "Lifestyle Creator",
     quote:
-      "Thumbnails and graphics look premium and consistent. My personal brand finally feels cohesive across all platforms.",
+      "My thumbnails finally feel consistent and eye-catching. They perfectly fit my personal brand style.",
     initial: "A",
     image: "/Assets/Reviews2/u4.jpeg",
   },
   {
     name: "Mark Evans",
-    position: "Digital Product Seller",
+    position: "Digital Seller",
     quote:
-      "From editing to visuals, everything feels conversion-driven. The focus on results is what sets them apart.",
+      "From LinkedIn banners to promotional posts, every design feels strategic and visually powerful.",
     initial: "M",
     image: "/Assets/Reviews2/u5.jpeg",
   },
   {
     name: "Daniel Foster",
-    position: "Entrepreneur, Creative Works",
+    position: "Food Business Owner",
     quote:
-      "Video edits improved engagement and retention. Every cut is smooth and professional, keeping the audience watching.",
+      "The packaging design completely upgraded our product presentation. Customers instantly noticed the difference.",
     initial: "D",
     image: "/Assets/Reviews2/u6.png",
   },
   {
     name: "Sophie Taylor",
-    position: "Coach, Mindset Academy",
+    position: "Beauty Creator",
     quote:
-      "The edits are perfectly timed and the visuals look incredible. My content now gets more views and better feedback.",
+      "The thumbnails look modern, clean, and highly clickable. My beauty content now stands out much more.",
     initial: "S",
     image: "/Assets/Reviews2/u7.jpeg",
   },
@@ -183,15 +184,15 @@ const secondColumnTestimonials: Testimonial[] = [
     name: "Lucas Morgan",
     position: "Marketing Specialist",
     quote:
-      "From thumbnails to videos, designs are consistent and visually appealing. Performance metrics improved noticeably.",
+      "Social media creatives are visually strong and conversion-focused. Engagement improved significantly.",
     initial: "L",
     image: "/Assets/Reviews2/u8.jpeg",
   },
   {
     name: "Isabella King",
-    position: "Content Creator",
+    position: "Food Blogger",
     quote:
-      "Every video feels polished and professional. Editing quality makes a huge difference in audience engagement.",
+      "The food posters and Instagram posts looked incredible. They made my page feel more premium and aesthetic.",
     initial: "I",
     image: "/Assets/Reviews2/u9.jpeg",
   },
@@ -199,7 +200,7 @@ const secondColumnTestimonials: Testimonial[] = [
     name: "Ryan Carter",
     position: "Business Coach",
     quote:
-      "Social media content now looks clean, premium, and performs much better. I’ve received more inquiries since the redesign.",
+      "My LinkedIn profile now looks much more professional because of the custom banner and branding design.",
     initial: "R",
     image: "/Assets/Reviews2/u10.png",
   },
@@ -208,25 +209,25 @@ const secondColumnTestimonials: Testimonial[] = [
 const thirdColumnTestimonials: Testimonial[] = [
   {
     name: "Chloe Bennett",
-    position: "Entrepreneur, Style Hive",
+    position: "Fashion Brand Owner",
     quote:
-      "Visuals are eye-catching and professional. My engagement rates went up significantly after using these services.",
+      "The posters and promotional graphics instantly improved our brand image. Everything now looks elegant and premium.",
     initial: "C",
     image: "/Assets/Reviews3/u1.jpeg",
   },
   {
     name: "James Walker",
-    position: "Founder, Tech Solutions",
+    position: "Tech YouTuber",
     quote:
-      "The video editing gave our tutorials more clarity and punch. Viewer feedback has been amazing.",
+      "The thumbnails are sharp, clean, and highly engaging. CTR improved noticeably after the redesign.",
     initial: "J",
     image: "/Assets/Reviews3/u2.png",
   },
   {
     name: "Sophia Martinez",
-    position: "CEO, Digital Wave",
+    position: "Restaurant CEO",
     quote:
-      "Our videos now look premium and professional. Engagement has improved dramatically.",
+      "Menu and food campaign designs gave our restaurant a completely fresh and modern look.",
     initial: "S",
     image: "/Assets/Reviews3/u3.jpeg",
   },
@@ -234,20 +235,59 @@ const thirdColumnTestimonials: Testimonial[] = [
     name: "Liam Anderson",
     position: "Freelancer",
     quote:
-      "Editing quality is consistent, and every video feels carefully crafted. My social media traction has grown steadily.",
+      "The LinkedIn banner and branding designs helped me look more professional and attract better clients online.",
     initial: "L",
     image: "/Assets/Reviews3/u4.jpeg",
   },
   {
     name: "Emma Johansson",
-    position: "Founder, Creative Minds",
+    position: "Content Creator",
     quote:
-      "Graphic designs and thumbnails are consistent and modern. My brand now feels professional across all platforms.",
+      "Thumbnail quality is exceptional. Every design feels custom-made for clicks, engagement, and audience attention.",
     initial: "E",
     image: "/Assets/Reviews3/u5.jpeg",
   },
+  {
+    name: "Aarav Sharma",
+    position: "Food Vlogger",
+    quote:
+      "The YouTube thumbnails instantly made my videos look more premium. My food content started getting better reach and engagement.",
+    initial: "A",
+    image: "/Assets/Reviews3/u6.jpeg",
+  },
+  {
+    name: "Olivia Brown",
+    position: "Restaurant Marketing Manager",
+    quote:
+      "Posters and menu designs perfectly matched our restaurant vibe. Customers constantly compliment the visuals.",
+    initial: "O",
+    image: "/Assets/Reviews3/u7.jpeg",
+  },
+  {
+    name: "Noah Wilson",
+    position: "Startup Founder",
+    quote:
+      "The LinkedIn branding and social media graphics made our startup appear much more established and trustworthy.",
+    initial: "N",
+    image: "/Assets/Reviews3/u8.jpeg",
+  },
+  {
+    name: "Mia Khan",
+    position: "Beauty Brand Owner",
+    quote:
+      "Packaging and promotional designs gave my products a luxury feel. Sales and customer trust improved noticeably.",
+    initial: "M",
+    image: "/Assets/Reviews3/u9.jpeg",
+  },
+  {
+    name: "Ethan Clark",
+    position: "YouTube Educator",
+    quote:
+      "The thumbnails are visually addictive and optimized for clicks. My educational videos finally started getting the attention they deserved.",
+    initial: "E",
+    image: "/Assets/Reviews3/u10.jpeg",
+  },
 ];
-
 
 
   return (
@@ -259,7 +299,7 @@ const thirdColumnTestimonials: Testimonial[] = [
 
       <div id="Reviews" className="flex flex-col my-24 bg-[#080808] text-white">
         <h1 className="text-2xl md:text-4xl lg:text-5xl mx-auto font-bold text-center mb-10">
-          What people are <span className="text-[#ffa200]">saying </span>about us.
+          What people are <span className="text-[#39FF14]">saying </span>about us.
         </h1>
         <div className="relative flex h-[500px] max-w-5xl mx-auto flex-row items-center justify-center overflow-hidden rounded-lg">
           {/* First column - Top to Bottom */}

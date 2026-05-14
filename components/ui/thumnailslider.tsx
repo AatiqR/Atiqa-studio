@@ -163,7 +163,7 @@ const FeaturedWork = () => {
 
         {/* Heading */}
         <div className="max-w-7xl mx-auto px-4 text-center mb-14">
-          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4 text-orange-400">
+          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4 text-green-400">
             Click Magnet Thumbnails
           </h2>
           <p className="text-neutral-500 max-w-md mx-auto">
@@ -183,7 +183,7 @@ const FeaturedWork = () => {
           <h3
             className="text-4xl md:text-6xl font-extrabold uppercase"
             style={{
-              color: "#FFA200",
+              color: "#39FF14",
               textShadow: "0 0 60px rgba(255,162,0,0.4)",
             }}
           >

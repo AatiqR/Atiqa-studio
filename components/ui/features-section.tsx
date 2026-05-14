@@ -11,85 +11,140 @@ export default function FeaturesSection() {
   return (
     <div className={`bg-black text-white py-20 px-4 md:px-8 lg:px-16 ${geist.className}`}>
       <div className="max-w-7xl mx-auto">
-        {/* Heading Section */}
+        
+        {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
-            <span className="text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]">Benefits</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-5 tracking-tight">
+            Why Creators & Brands
+            <span className="text-[#39FF14] drop-shadow-[0_0_15px_rgba(57,255,20,0.9)]">
+              {" "}Choose Atiqa
+            </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300">
-            What You Get By Working With Atiqa
+
+          <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Professional graphic design solutions focused on attention, clicks,
+            branding, engagement, and business growth.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-24">
-  {/* Benefit 1 */}
-  <div className="flex flex-col items-start">
-    <div className="mb-5">
-      <Grid className="w-10 h-10 text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]" strokeWidth={1.25} />
-    </div>
-    <h3 className="text-2xl font-bold mb-3">100% Client Satisfaction</h3>
-    <p className="text-base text-gray-300 leading-relaxed">
-      We don’t stop at delivery. Every project is refined until it truly works for your brand, audience, and goals.
-    </p>
-  </div>
+        {/* Benefits Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-20">
 
-  {/* Benefit 2 */}
-  <div className="flex flex-col items-start">
-    <div className="mb-5">
-      <Zap className="w-10 h-10 text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]" strokeWidth={1.25} />
-    </div>
-    <h3 className="text-2xl font-bold mb-3">1000+ Projects Delivered</h3>
-    <p className="text-base text-gray-300 leading-relaxed">
-      From high-performing video edits to clean designs and websites, we know what works because we’ve done it at scale.
-    </p>
-  </div>
+          {/* Benefit 1 */}
+          <div className="group flex flex-col items-start">
+            <div className="mb-5 p-4 rounded-2xl border border-[#39FF14]/20 bg-[#39FF14]/5 group-hover:bg-[#39FF14]/10 transition-all duration-300">
+              <Zap
+                className="w-10 h-10 text-[#39FF14] drop-shadow-[0_0_15px_rgba(57,255,20,0.9)]"
+                strokeWidth={1.5}
+              />
+            </div>
 
-  {/* Benefit 3 */}
-  <div className="flex flex-col items-start">
-    <div className="mb-5">
-      <PuzzlePiece className="w-10 h-10 text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]" strokeWidth={1.25} />
-    </div>
-    <h3 className="text-2xl font-bold mb-3">95%+ Client Retention</h3>
-    <p className="text-base text-gray-300 leading-relaxed">
-      Clients stay with us because our content, visuals, and strategies consistently bring engagement, growth, and trust.
-    </p>
-  </div>
+            <h3 className="text-2xl font-bold mb-3">
+              High CTR Thumbnail Design
+            </h3>
 
-  {/* Benefit 4 */}
-  <div className="flex flex-col items-start">
-    <div className="mb-5">
-      <CreditCard className="w-10 h-10 text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]" strokeWidth={1.25} />
-    </div>
-    <h3 className="text-2xl font-bold mb-3">3+ Years of Experience</h3>
-    <p className="text-base text-gray-300 leading-relaxed">
-      Years of hands on experience in video editing, branding, social media, and web allow us to move fast and smart.
-    </p>
-  </div>
+            <p className="text-gray-300 leading-relaxed text-base">
+              Thumbnails designed with strong psychology, emotion, contrast,
+              and curiosity to increase clicks, views, and overall YouTube growth.
+            </p>
+          </div>
 
-  {/* Benefit 5 */}
-  <div className="flex flex-col items-start">
-    <div className="mb-5">
-      <Users className="w-10 h-10 text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]" strokeWidth={1.25} />
-    </div>
-    <h3 className="text-2xl font-bold mb-3">Content That Converts</h3>
-    <p className="text-base text-gray-300 leading-relaxed">
-      We edit videos, design visuals, and manage content with one goal in mind: attention, retention, and action.
-    </p>
-  </div>
+          {/* Benefit 2 */}
+          <div className="group flex flex-col items-start">
+            <div className="mb-5 p-4 rounded-2xl border border-[#39FF14]/20 bg-[#39FF14]/5 group-hover:bg-[#39FF14]/10 transition-all duration-300">
+              <Grid
+                className="w-10 h-10 text-[#39FF14] drop-shadow-[0_0_15px_rgba(57,255,20,0.9)]"
+                strokeWidth={1.5}
+              />
+            </div>
 
-  {/* Benefit 6 */}
-  <div className="flex flex-col items-start">
-    <div className="mb-5">
-      <Infinity className="w-10 h-10 text-[#ffa200] drop-shadow-[0_0_10px_rgba(255,189,0,0.8)]" strokeWidth={1.25} />
-    </div>
-    <h3 className="text-2xl font-bold mb-3">Long Term Growth Partner</h3>
-    <p className="text-base text-gray-300 leading-relaxed">
-      We work like an in house team, helping you scale your brand across video, design, social media, and web.
-    </p>
-  </div>
-</div>
+            <h3 className="text-2xl font-bold mb-3">
+              Scroll-Stopping Posters
+            </h3>
 
+            <p className="text-gray-300 leading-relaxed text-base">
+              Eye-catching posters and social media designs that instantly grab
+              attention and make your brand look premium and professional.
+            </p>
+          </div>
+
+          {/* Benefit 3 */}
+          <div className="group flex flex-col items-start">
+            <div className="mb-5 p-4 rounded-2xl border border-[#39FF14]/20 bg-[#39FF14]/5 group-hover:bg-[#39FF14]/10 transition-all duration-300">
+              <PuzzlePiece
+                className="w-10 h-10 text-[#39FF14] drop-shadow-[0_0_15px_rgba(57,255,20,0.9)]"
+                strokeWidth={1.5}
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mb-3">
+              Premium Brand Identity
+            </h3>
+
+            <p className="text-gray-300 leading-relaxed text-base">
+              Logos, brand visuals, and design systems that build trust,
+              consistency, and a memorable business identity.
+            </p>
+          </div>
+
+          {/* Benefit 4 */}
+          <div className="group flex flex-col items-start">
+            <div className="mb-5 p-4 rounded-2xl border border-[#39FF14]/20 bg-[#39FF14]/5 group-hover:bg-[#39FF14]/10 transition-all duration-300">
+              <CreditCard
+                className="w-10 h-10 text-[#39FF14] drop-shadow-[0_0_15px_rgba(57,255,20,0.9)]"
+                strokeWidth={1.5}
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mb-3">
+              Menu & Packaging Design
+            </h3>
+
+            <p className="text-gray-300 leading-relaxed text-base">
+              Clean and attractive menu designs plus packaging visuals that help
+              restaurants and brands increase customer attraction and sales.
+            </p>
+          </div>
+
+          {/* Benefit 5 */}
+          <div className="group flex flex-col items-start">
+            <div className="mb-5 p-4 rounded-2xl border border-[#39FF14]/20 bg-[#39FF14]/5 group-hover:bg-[#39FF14]/10 transition-all duration-300">
+              <Users
+                className="w-10 h-10 text-[#39FF14] drop-shadow-[0_0_15px_rgba(57,255,20,0.9)]"
+                strokeWidth={1.5}
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mb-3">
+              Designed For Your Audience
+            </h3>
+
+            <p className="text-gray-300 leading-relaxed text-base">
+              Every design is created according to your audience, niche,
+              content style, and business goals for maximum engagement.
+            </p>
+          </div>
+
+          {/* Benefit 6 */}
+          <div className="group flex flex-col items-start">
+            <div className="mb-5 p-4 rounded-2xl border border-[#39FF14]/20 bg-[#39FF14]/5 group-hover:bg-[#39FF14]/10 transition-all duration-300">
+              <Infinity
+                className="w-10 h-10 text-[#39FF14] drop-shadow-[0_0_15px_rgba(57,255,20,0.9)]"
+                strokeWidth={1.5}
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mb-3">
+              Fast Delivery & Revisions
+            </h3>
+
+            <p className="text-gray-300 leading-relaxed text-base">
+              Quick turnaround times with smooth communication and revisions
+              to ensure every design matches your exact vision perfectly.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }

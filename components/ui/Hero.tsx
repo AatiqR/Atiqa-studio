@@ -126,11 +126,11 @@ const MouseFollower = memo(() => {
   return (
     <>
       <div
-        className="fixed w-8 h-8 rounded-full border-2 border-[#ffa200] pointer-events-none z-50 transition-transform duration-100"
+        className="fixed w-8 h-8 rounded-full border-2 border-[#39FF14] pointer-events-none z-50 transition-transform duration-100"
         style={{ left: position.x, top: position.y, transform: "translate(-50%,-50%)" }}
       />
       <div
-        className="fixed w-2 h-2 bg-[#ffa200] rounded-full pointer-events-none z-50 transition-transform duration-75"
+        className="fixed w-2 h-2 bg-[#39FF14] rounded-full pointer-events-none z-50 transition-transform duration-75"
         style={{ left: position.x, top: position.y, transform: "translate(-50%,-50%)" }}
       />
     </>
@@ -230,13 +230,13 @@ export default function Home() {
 
       {/* Left Links */}
       <div className="hidden md:flex flex-1 gap-10">
-        <Link href="#Services" className="font-bold text-black hover:text-[#ffa200] transition-colors">
+        <Link href="#Services" className="font-bold text-black hover:text-[#39FF14] transition-colors">
           Services
         </Link>
-        <Link href="#Projects" className="font-bold text-black hover:text-[#ffa200] transition-colors">
+        <Link href="#Projects" className="font-bold text-black hover:text-[#39FF14] transition-colors">
           Projects
         </Link>
-        <Link href="#Reviews" className="font-bold text-black hover:text-[#ffa200] transition-colors">
+        <Link href="#Reviews" className="font-bold text-black hover:text-[#39FF14] transition-colors">
           Reviews
         </Link>
       </div>
@@ -248,13 +248,13 @@ export default function Home() {
 
       {/* Right Links */}
       <div className="hidden md:flex flex-1 justify-end gap-10 items-center">
-        <Link href="#Casestudy" className="font-bold text-black hover:text-[#ffa200] transition-colors">
+        <Link href="#Casestudy" className="font-bold text-black hover:text-[#39FF14] transition-colors">
           Case Study
         </Link>
-        <Link href="#Contact" className="font-bold text-black hover:text-[#ffa200] transition-colors">
+        <Link href="#Contact" className="font-bold text-black hover:text-[#39FF14] transition-colors">
           Contact
         </Link>
-        <Button className="bg-[#ffa200] text-black font-extrabold px-6 sm:px-7 py-3 sm:py-4 rounded-2xl shadow-md  transition-all"
+        <Button className="bg-[#39FF14] text-black font-extrabold px-6 sm:px-7 py-3 sm:py-4 rounded-2xl shadow-md  transition-all"
             onClick={() => {
       const bookingSection = document.getElementById("booking");
       if (bookingSection) {
@@ -284,12 +284,12 @@ export default function Home() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="block text-black font-bold text-lg hover:text-[#ffa200] transition-colors"
+              className="block text-black font-bold text-lg hover:text-[#39FF14] transition-colors"
             >
               {link.label}
             </Link>
           ))}
-          <Button className="w-full bg-[#ffa200] text-black font-extrabold px-8 py-4 rounded-2xl shadow-md transition-all"
+          <Button className="w-full bg-[#39FF14] text-black font-extrabold px-8 py-4 rounded-2xl shadow-md transition-all"
               onClick={() => {
       const bookingSection = document.getElementById("booking");
       if (bookingSection) {
@@ -309,33 +309,33 @@ export default function Home() {
       <main className="pt-24 sm:pt-28 md:pt-32 lg:pt-36 px-5 sm:px-6 md:px-8">
         <div className="mx-auto max-w-7xl relative">
           <div className="absolute -left-5 sm:-left-10 top-8 sm:top-16 md:top-20">
-            <div className="w-48 h-48 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-[#ffa200] opacity-15 blur-3xl"></div>
+            <div className="w-48 h-48 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-[#39FF14] opacity-15 blur-3xl"></div>
           </div>
           <div className="absolute -right-5 sm:-right-10 top-16 sm:top-32 md:top-40">
-            <div className="w-32 h-32 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-[#ffa200] opacity-10 blur-3xl"></div>
+            <div className="w-32 h-32 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-[#39FF14] opacity-10 blur-3xl"></div>
           </div>
 
           <div className="text-center space-y-6 sm:space-y-7 md:space-y-10 relative">
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              <div className="absolute top-1/4 left-1/4 w-16 sm:w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-[#ffa200] to-transparent transform rotate-45"></div>
-              <div className="absolute bottom-1/4 right-1/4 w-16 sm:w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-[#ffa200] to-transparent transform -rotate-45"></div>
+              <div className="absolute top-1/4 left-1/4 w-16 sm:w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-[#39FF14] to-transparent transform rotate-45"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-16 sm:w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-[#39FF14] to-transparent transform -rotate-45"></div>
 
-              <Star className="absolute top-1/3 left-1/6 h-3 w-3 sm:h-5 sm:w-5 md:h-6 md:w-6 text-[#ffa200] animate-pulse" />
+              <Star className="absolute top-1/3 left-1/6 h-3 w-3 sm:h-5 sm:w-5 md:h-6 md:w-6 text-[#39FF14] animate-pulse" />
               <Star
-                className="absolute bottom-1/3 right-1/6 h-2.5 w-2.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#ffa200] animate-pulse"
-                fill="#ffa200"
+                className="absolute bottom-1/3 right-1/6 h-2.5 w-2.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#39FF14] animate-pulse"
+                fill="#39FF14"
               />
 
-              <div className="w-2.5 h-2.5 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-[#ffa200] rounded-full absolute animate-pulse top-1/4 left-1/3 opacity-50"></div>
-              <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-[#ffa200] rounded-full absolute animate-pulse left-1/4 top-3/4 opacity-50"></div>
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-[#ffa200] rounded-full absolute animate-pulse right-1/4 bottom-1/4 opacity-50"></div>
+              <div className="w-2.5 h-2.5 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-[#39FF14] rounded-full absolute animate-pulse top-1/4 left-1/3 opacity-50"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-[#39FF14] rounded-full absolute animate-pulse left-1/4 top-3/4 opacity-50"></div>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-[#39FF14] rounded-full absolute animate-pulse right-1/4 bottom-1/4 opacity-50"></div>
             </div>
 
             {/* <h1 className="text-[2.5rem] leading-[1.08] sm:text-5xl sm:leading-[1.1] md:text-6xl lg:text-7xl xl:text-8xl font-black max-w-[90%] sm:max-w-lg md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto relative z-10 text-white tracking-tight"> */}
               {/* I Build{" "}
               <span
                 key={words[index]}
-                className="text-[#ffa200] inline-block transition-all duration-500 break-words"
+                className="text-[#39FF14] inline-block transition-all duration-500 break-words"
               >
                 {words[index]}
               </span>{" "} */}
@@ -343,7 +343,7 @@ export default function Home() {
             </h1> */}
 <h1 className="text-[2.5rem] leading-[1.08] sm:text-5xl sm:leading-[1.1] md:text-6xl lg:text-7xl xl:text-8xl font-black max-w-[90%] sm:max-w-lg md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto relative z-10 text-white tracking-tight">
   High-Converting
-  <span className="text-[#ffa200] inline-block transition-all duration-500 break-words">
+  <span className="text-[#39FF14] inline-block transition-all duration-500 break-words">
     {" "}
     Thumbnail Designs {" "}
   </span>
@@ -364,7 +364,7 @@ export default function Home() {
     window.open("https://wa.me/9203062775191?text=Hi,%20I%20would%20like%20a%20talk%20", "_blank");
   }}
   className="relative w-[90%] sm:w-auto text-lg sm:text-lg md:text-xl py-7 sm:py-7 md:py-8 px-10 sm:px-10 md:px-12
-             text-black bg-[#FFA200] border-none rounded-xl sm:rounded-lg shadow-lg
+             text-black bg-[#39FF14] border-none rounded-xl sm:rounded-lg shadow-lg
              hover:shadow-[0_0_30px_rgba(255,162,0,0.6)] transition-all duration-300 ease-in-out
              hover:bg-[#00dd4f] active:translate-y-1 font-bold text-center mx-auto"
 >
@@ -395,7 +395,7 @@ Talk on Whatsapp
         animate={{ scale: 1, rotate: 0 }}
         transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
         className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden 
-                   border border-[#ffa200]/80 shadow-[0_0_10px_rgba(57,255,20,0.4)] 
+                   border border-[#39FF14]/80 shadow-[0_0_10px_rgba(57,255,20,0.4)] 
                    hover:shadow-[0_0_20px_rgba(57,255,20,0.6)] transition-all duration-300 
                    bg-black/20 backdrop-blur-sm"
       >
@@ -430,7 +430,7 @@ Talk on Whatsapp
     ))}
 
     <span className="text-gray-300 text-sm sm:text-base font-semibold tracking-wide">
-      <span className="text-[#ffa200] font-extrabold">Trusted</span> by 100+ Creators, businesses, & brands worldwide
+      <span className="text-[#39FF14] font-extrabold">Trusted</span> by 100+ Creators, businesses, & brands worldwide
     </span>
   </div>
 
@@ -454,7 +454,7 @@ design solutions, delivered fast, clean, and stress free.
 
   {/* Strip 1 – Left ➜ Right */}
   {/* <div className="absolute left-1/2 top-1/2 w-[120vw] -translate-x-1/2 -translate-y-1/2 rotate-[0deg]">
-    <div className="h-14 sm:h-14 md:h-16 lg:h-20 bg-[#ffa200] shadow-[0_0_0px_rgba(0,255,89,1)]">
+    <div className="h-14 sm:h-14 md:h-16 lg:h-20 bg-[#39FF14] shadow-[0_0_0px_rgba(0,255,89,1)]">
       <div className="flex items-center h-full animate-[marquee-left_15s_linear_infinite]">
         <div className="flex items-center gap-10 whitespace-nowrap px-8">
           {[...Array(20)].map((_, i) => (
@@ -477,7 +477,7 @@ design solutions, delivered fast, clean, and stress free.
 
   {/* Strip 2 – Right ➜ Left */}
  <div className="absolute left-1/2 top-1/2 w-[120vw] -translate-x-1/2 -translate-y-1/2">
-  <div className="h-14 sm:h-14 md:h-16 lg:h-20 bg-[#ffa200] shadow-[0_0_40px_rgba(255,45,85,0.35)] overflow-hidden">
+  <div className="h-14 sm:h-14 md:h-16 lg:h-20 bg-[#39FF14] shadow-[0_0_40px_rgba(255,45,85,0.35)] overflow-hidden">
     <div className="flex items-center h-full animate-[marquee-right_18s_linear_infinite]">
       <div className="flex items-center gap-10 whitespace-nowrap px-8">
         {[...Array(20)].map((_, i) => (
@@ -547,11 +547,11 @@ design solutions, delivered fast, clean, and stress free.
     <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1400 400" preserveAspectRatio="xMidYMax slice">
       <defs>
         <linearGradient id="earthGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: '#ffa200', stopOpacity: 0 }} />
-          <stop offset="20%" style={{ stopColor: '#ffa200', stopOpacity: 0.5 }} />
-          <stop offset="50%" style={{ stopColor: '#ffa200', stopOpacity: 1 }} />
-          <stop offset="80%" style={{ stopColor: '#ffa200', stopOpacity: 0.5 }} />
-          <stop offset="100%" style={{ stopColor: '#ffa200', stopOpacity: 0 }} />
+          <stop offset="0%" style={{ stopColor: '#39FF14', stopOpacity: 0 }} />
+          <stop offset="20%" style={{ stopColor: '#39FF14', stopOpacity: 0.5 }} />
+          <stop offset="50%" style={{ stopColor: '#39FF14', stopOpacity: 1 }} />
+          <stop offset="80%" style={{ stopColor: '#39FF14', stopOpacity: 0.5 }} />
+          <stop offset="100%" style={{ stopColor: '#39FF14', stopOpacity: 0 }} />
         </linearGradient>
         <filter id="earthGlow">
           <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
@@ -570,8 +570,8 @@ design solutions, delivered fast, clean, and stress free.
         filter=""
       />
     </svg>
-    {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[100%] sm:w-[85%] md:w-[80%] h-44 sm:h-52 md:h-64 bg-gradient-to-t from-[#ffa200]/25 via-[#ffa200]/15 to-transparent blur-3xl"></div>
-    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[85%] sm:w-[70%] md:w-[60%] h-32 sm:h-40 md:h-48 bg-gradient-to-t from-[#ffa200]/35 via-[#ffa200]/20 to-transparent blur-2xl"></div> */}
+    {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[100%] sm:w-[85%] md:w-[80%] h-44 sm:h-52 md:h-64 bg-gradient-to-t from-[#39FF14]/25 via-[#39FF14]/15 to-transparent blur-3xl"></div>
+    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[85%] sm:w-[70%] md:w-[60%] h-32 sm:h-40 md:h-48 bg-gradient-to-t from-[#39FF14]/35 via-[#39FF14]/20 to-transparent blur-2xl"></div> */}
   </div>
 </div>
 

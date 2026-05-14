@@ -12,7 +12,7 @@ import Benefit from "../components/ui/features-section"
 import Faqs from "../components/ui/faq-section"
 import Booking from "../components/ui/booking"
 import Footer from "../components/ui/footer"
-import Pricing from "../components/ui/service"
+// import Pricing from "../components/ui/service"
 // import Short  from "../components/ui/ShortP"
 
 
@@ -28,7 +28,6 @@ export default function Home() {
       <Reviews/>
       <Benefit/>
       <Faqs />
-      <Pricing/>
       <Booking/>
       <Footer/>
     </div>

@@ -60,7 +60,7 @@ const companies = [
   return (
     <div className="w-full h-[200px] bg-black flex flex-col justify-center px-4 md:px-10 overflow-hidden ">
   <div className="mb-6 text-center">
-    <h2 className="text-3xl md:text-5xl font-extrabold text-[#ffa200] mb-2 tracking-tight drop-shadow-[0_0_2px_#ffa200]">
+    <h2 className="text-3xl md:text-5xl font-extrabold text-[#39FF14] mb-2 tracking-tight drop-shadow-[0_0_2px_#39FF14]">
       Our Valued Clients
     </h2>
     <p className="text-sm md:text-base text-gray-300 font-semibold">

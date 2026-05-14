@@ -6,7 +6,7 @@ export default function FAQSection() {
     <div className="bg-black min-h-screen w-full py-16 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-white text-xl mb-2">Questions?</h2>
-        <h1 className="text-[#ffa200] text-5xl md:text-6xl font-bold mb-16">We got answers.</h1>
+        <h1 className="text-[#39FF14] text-5xl md:text-6xl font-bold mb-16">We got answers.</h1>
 
 <Accordion type="single" collapsible className="space-y-4">
 

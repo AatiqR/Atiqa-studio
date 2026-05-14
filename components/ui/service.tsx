@@ -13,7 +13,7 @@ const services = [
   {
     id: "graphic",
     title: "Graphic Design",
-    icon: <Palette className="w-8 h-8 text-[#FFA200]" />,
+    icon: <Palette className="w-8 h-8 text-[#39FF14]" />,
     price: "$20+",
     starting: "Starting Price",
     description: [
@@ -34,7 +34,7 @@ const services = [
   {
     id: "video",
     title: "Video Editing",
-    icon: <Video className="w-8 h-8 text-[#FFA200]" />,
+    icon: <Video className="w-8 h-8 text-[#39FF14]" />,
     price: "$40 – $1,000",
     starting: "Per Video / Retainers Available",
     description: [
@@ -68,7 +68,7 @@ const services = [
   {
     id: "web",
     title: "Web Development",
-    icon: <Monitor className="w-8 h-8 text-[#FFA200]" />,
+    icon: <Monitor className="w-8 h-8 text-[#39FF14]" />,
     price: "$100+",
     starting: "Starting Price",
     description: [
@@ -94,14 +94,14 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="relative w-full bg-black py-28 px-6 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FFA200]/20 blur-[120px] rounded-full" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#FFA200]/10 blur-[120px] rounded-full" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#39FF14]/20 blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#39FF14]/10 blur-[120px] rounded-full" />
 
       <div className="relative max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-24">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Atiqa <span className="text-[#FFA200]">Pricing</span>
+            Atiqa <span className="text-[#39FF14]">Pricing</span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Clear, simple, and professional pricing. Designed to grow your brand.
@@ -116,13 +116,13 @@ export default function PricingSection() {
               key={service.id}
               className={`group flex flex-col rounded-3xl p-8 bg-white text-black
                 shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-4 transition-all duration-500
-                ${service.featured ? 'border-[#FFA200] shadow-[0_40px_100px_rgba(255,162,0,0.25)] scale-105' : 'border-transparent'}
+                ${service.featured ? 'border-[#39FF14] shadow-[0_40px_100px_rgba(255,162,0,0.25)] scale-105' : 'border-transparent'}
                 hover:-translate-y-4 hover:scale-105`}
             >
               {/* Featured Badge */}
               {service.featured && (
                 <div className="text-center mb-4">
-                  <span className="bg-[#FFA200] text-black px-4 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-[#39FF14] text-black px-4 py-1 rounded-full text-sm font-bold">
                     MOST POPULAR
                   </span>
                 </div>
@@ -135,7 +135,7 @@ export default function PricingSection() {
               </div>
 
               {/* Price */}
-              <p className="text-4xl md:text-5xl font-extrabold text-[#FFA200]">{service.price}</p>
+              <p className="text-4xl md:text-5xl font-extrabold text-[#39FF14]">{service.price}</p>
               <span className="text-gray-500 text-sm mb-6">{service.starting}</span>
 
               <div className="border-t border-gray-200 my-6"></div>
@@ -155,7 +155,7 @@ export default function PricingSection() {
                   <ul className="space-y-2 text-sm mb-6">
                     {service.included.map((item, idx) => (
                       <li key={idx} className="flex items-start">
-                        <Check className="w-4 h-4 text-[#FFA200] mr-2 mt-1" /> {item}
+                        <Check className="w-4 h-4 text-[#39FF14] mr-2 mt-1" /> {item}
                       </li>
                     ))}
                   </ul>
@@ -191,7 +191,7 @@ export default function PricingSection() {
                 href={`https://wa.me/9203062775191?text=${encodeURIComponent(service.waMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-auto bg-[#FFA200] hover:bg-orange-600
+                className={`mt-auto bg-[#39FF14] hover:bg-green-600
                   hover:shadow-[0_0_40px_rgba(255,162,0,0.8)]
                   transition-all duration-300 font-bold py-4 rounded-full text-center`}
               >

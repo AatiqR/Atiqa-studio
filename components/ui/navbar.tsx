@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="bg-orange-500 p-2 rounded-md mr-2">
+            <div className="bg-green-500 p-2 rounded-md mr-2">
               <div className="w-5 h-5"></div>
             </div>
             <span className="font-bold text-white text-lg hidden sm:block">WebsitePro</span>
@@ -46,10 +46,10 @@ export default function Navbar() {
               <a
                 key={item}
                 href="#"
-                className="text-neutral-300 hover:text-orange-500 transition-colors duration-300 relative group"
+                className="text-neutral-300 hover:text-green-500 transition-colors duration-300 relative group"
               >
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
@@ -59,7 +59,7 @@ export default function Navbar() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-golden-500 text-black font-medium px-5 py-2 rounded-full hover:bg-orange-400 transition-colors duration-300 shadow-[0_0_10px_rgba(62,250,140,0.3)]"
+              className="bg-golden-500 text-black font-medium px-5 py-2 rounded-full hover:bg-green-400 transition-colors duration-300 shadow-[0_0_10px_rgba(62,250,140,0.3)]"
             >
               Book a call
             </motion.button>
@@ -67,7 +67,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2 rounded-md border border-neutral-800 hover:border-orange-500 transition-colors duration-300"
+            className="md:hidden text-white p-2 rounded-md border border-neutral-800 hover:border-green-500 transition-colors duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -91,7 +91,7 @@ export default function Navbar() {
                   <a
                     key={item}
                     href="#"
-                    className="text-neutral-300 hover:text-orange-500 transition-colors duration-300 py-2 border-b border-neutral-800"
+                    className="text-neutral-300 hover:text-green-500 transition-colors duration-300 py-2 border-b border-neutral-800"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item}
@@ -100,7 +100,7 @@ export default function Navbar() {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-orange-500 text-black font-medium px-5 py-2 rounded-full hover:bg-orange-400 transition-colors duration-300 mt-2 shadow-[0_0_10px_rgba(62,250,140,0.3)]"
+                  className="bg-green-500 text-black font-medium px-5 py-2 rounded-full hover:bg-green-400 transition-colors duration-300 mt-2 shadow-[0_0_10px_rgba(62,250,140,0.3)]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Book a call
