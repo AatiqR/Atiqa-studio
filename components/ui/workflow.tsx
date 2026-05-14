@@ -12,32 +12,39 @@ const WorkflowTimeline = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [mounted, setMounted] = useState(false);
 
-  const steps: Step[] = [
-    {
-      id: 1,
-      number: '01',
-      title: 'Know Your Audience',
-      subtitle: 'Research Market, Define Target Audience'
-    },
-    {
-      id: 2,
-      number: '02',
-      title: 'Craft Strategic Approach',
-      subtitle: 'Set Goals, Choose Effective Channels'
-    },
-    {
-      id: 3,
-      number: '03',
-      title: 'Execute Your Vision',
-      subtitle: 'Optimize Website, Share Engaging Content'
-    },
-    {
-      id: 4,
-      number: '04',
-      title: 'Analyze, Learn, Enhance',
-      subtitle: 'Monitor, Analyze, Adapt for Growth'
-    }
-  ];
+ const steps: Step[] = [
+  {
+    id: 1,
+    number: "01",
+    title: "Analyze Your Content",
+    subtitle:
+      "I study your video topic, audience, niche, and competitors to understand what type of thumbnail will attract the most clicks.",
+  },
+
+  {
+    id: 2,
+    number: "02",
+    title: "Build Click-Focused Concepts",
+    subtitle:
+      "Multiple thumbnail concepts are planned with powerful emotions, bold composition, strong contrast, and curiosity-driven visuals.",
+  },
+
+  {
+    id: 3,
+    number: "03",
+    title: "Design For Maximum CTR",
+    subtitle:
+      "I create high-converting thumbnails using attention-grabbing typography, cinematic editing, color psychology, and scroll-stopping visuals.",
+  },
+
+  {
+    id: 4,
+    number: "04",
+    title: "Optimize & Deliver",
+    subtitle:
+      "Final thumbnails are refined for YouTube performance, mobile visibility, and brand consistency to help increase clicks and audience retention.",
+  },
+];
 
   useEffect(() => {
     setMounted(true);

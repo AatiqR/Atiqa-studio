@@ -45,28 +45,38 @@ const portfolioImages: ImageItem[] = [
   { id: 32, src: "/Assets/Thumbnail/32.jpg", alt: "Portfolio Thumbnail Image 27" },
   { id: 33, src: "/Assets/Thumbnail/33.jpg", alt: "Portfolio Thumbnail Image 28" },
   { id: 34, src: "/Assets/Thumbnail/34.jpg", alt: "Portfolio Thumbnail Image 29" },
-  { id: 35, src: "/Assets/Thumbnail/35.jpg", alt: "Portfolio Thumbnail Image 30" }
+  { id: 35, src: "/Assets/Thumbnail/35.jpg", alt: "Portfolio Thumbnail Image 30" },
+  { id: 36, src: "/Assets/Thumbnail/36.jpg", alt: "Portfolio Thumbnail Image 26" },
+  { id: 37, src: "/Assets/Thumbnail/37.jpg", alt: "Portfolio Thumbnail Image 27" },
+  { id: 38, src: "/Assets/Thumbnail/38.jpg", alt: "Portfolio Thumbnail Image 28" },
+  { id: 39, src: "/Assets/Thumbnail/39.jpg", alt: "Portfolio Thumbnail Image 29" },
 ];
 
 /* ✅ Artwork Images (1–17) */
 const artworkImages: ImageItem[] = [
-  { id: 101, src: "/Assets/Artwork/1.jpg", alt: "Artwork 1" },
-  { id: 102, src: "/Assets/Artwork/2.jpg", alt: "Artwork 2" },
-  { id: 103, src: "/Assets/Artwork/3.jpg", alt: "Artwork 3" },
-  { id: 104, src: "/Assets/Artwork/4.jpg", alt: "Artwork 4" },
-  { id: 105, src: "/Assets/Artwork/5.jpg", alt: "Artwork 5" },
-  { id: 106, src: "/Assets/Artwork/6.jpg", alt: "Artwork 6" },
-  { id: 107, src: "/Assets/Artwork/7.jpg", alt: "Artwork 7" },
-  { id: 108, src: "/Assets/Artwork/8.jpg", alt: "Artwork 8" },
-  { id: 109, src: "/Assets/Artwork/9.jpg", alt: "Artwork 9" },
-  { id: 110, src: "/Assets/Artwork/10.jpg", alt: "Artwork 10" },
-  { id: 111, src: "/Assets/Artwork/11.jpg", alt: "Artwork 11" },
-  { id: 112, src: "/Assets/Artwork/12.jpg", alt: "Artwork 12" },
-  { id: 113, src: "/Assets/Artwork/13.jpg", alt: "Artwork 13" },
-  { id: 114, src: "/Assets/Artwork/14.jpg", alt: "Artwork 14" },
-
-  { id: 116, src: "/Assets/Artwork/16.jpg", alt: "Artwork 16" },
-  { id: 117, src: "/Assets/Artwork/17.jpg", alt: "Artwork 17" },
+  { id: 101, src: "/Assets/Posters/1.jpeg", alt: "Poster 1" },
+  { id: 102, src: "/Assets/Posters/2.jpeg", alt: "Poster 2" },
+  { id: 103, src: "/Assets/Posters/3.jpeg", alt: "Poster 3" },
+  { id: 104, src: "/Assets/Posters/4.jpeg", alt: "Poster 4" },
+  { id: 105, src: "/Assets/Posters/5.jpeg", alt: "Poster 5" },
+  { id: 106, src: "/Assets/Posters/6.jpeg", alt: "Poster 6" },
+  { id: 107, src: "/Assets/Posters/7.jpeg", alt: "Poster 7" },
+  { id: 108, src: "/Assets/Posters/8.jpeg", alt: "Poster 8" },
+  { id: 109, src: "/Assets/Posters/9.jpeg", alt: "Poster 9" },
+  { id: 110, src: "/Assets/Posters/10.jpeg", alt: "Poster 10" },
+  { id: 111, src: "/Assets/Posters/11.jpeg", alt: "Poster 11" },
+  { id: 112, src: "/Assets/Posters/12.jpeg", alt: "Poster 12" },
+  { id: 113, src: "/Assets/Posters/13.jpeg", alt: "Poster 13" },
+  { id: 114, src: "/Assets/Posters/14.jpeg", alt: "Poster 14" },
+  { id: 115, src: "/Assets/Posters/15.jpeg", alt: "Poster 15" },
+  { id: 116, src: "/Assets/Posters/16.jpeg", alt: "Poster 16" },
+  { id: 117, src: "/Assets/Posters/17.jpeg", alt: "Poster 17" },
+  { id: 118, src: "/Assets/Posters/18.jpeg", alt: "Poster 18" },
+  { id: 119, src: "/Assets/Posters/19.jpeg", alt: "Poster 19" },
+  { id: 120, src: "/Assets/Posters/20.jpeg", alt: "Poster 20" },
+  { id: 121, src: "/Assets/Posters/21.jpeg", alt: "Poster 21" },
+  { id: 122, src: "/Assets/Posters/22.jpeg", alt: "Poster 22" },
+  { id: 123, src: "/Assets/Posters/23.jpeg", alt: "Poster 23" },
 ];
 
 /* ✅ Split Thumbnail Rows */
@@ -93,35 +103,38 @@ const MarqueeRow = ({
       : "animate-marquee-right-slow";
 
   return (
-    <div className="relative overflow-hidden py-2">
-      <div className={`flex gap-4 ${animationClass}`} style={{ width: "fit-content" }}>
-        {[...images, ...images].map((image, index) => (
-          <div
-            key={`${image.id}-${index}`}
-            className={`relative flex-shrink-0 rounded-xl overflow-hidden
-              ${
-                isArtwork
-                  ? "w-64 sm:w-72 md:w-80 aspect-square"
-                  : "w-52 sm:w-60 md:w-68 lg:w-76 aspect-video"
-              }`}
-            style={{
-              boxShadow: "0 12px 40px -12px rgba(255,162,0,0.25)",
-            }}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(max-width:768px) 100vw, 400px"
-              className={`${
-                isArtwork ? "object-contain bg-black" : "object-cover"
-              }`}
-              loading="lazy"
-            />
-          </div>
-        ))}
+  <div className="relative overflow-hidden py-2">
+  <div
+    className={`flex gap-4 ${animationClass}`}
+    style={{ width: "fit-content" }}
+  >
+    {[...images, ...images].map((image, index) => (
+      <div
+        key={`${image.id}-${index}`}
+        className={`relative flex-shrink-0 rounded-xl overflow-hidden
+          ${
+            isArtwork
+              ? "w-[260px] sm:w-[300px] md:w-[340px] lg:w-[380px] aspect-[4/5]"
+              : "w-52 sm:w-60 md:w-68 lg:w-76 aspect-video"
+          }`}
+        style={{
+          boxShadow: "0 12px 40px -12px rgba(255,162,0,0.25)",
+        }}
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          sizes="(max-width:768px) 100vw, 400px"
+          className={`${
+            isArtwork ? "object-cover" : "object-cover"
+          }`}
+          loading="lazy"
+        />
       </div>
-    </div>
+    ))}
+  </div>
+</div>
   );
 };
 
@@ -157,7 +170,7 @@ const FeaturedWork = () => {
               textShadow: "0 0 60px rgba(255,162,0,0.4)",
             }}
           >
-            Artwork Showcase
+            Poster Showcase
           </h3>
         </div>
 
