@@ -56,6 +56,14 @@ const portfolioImages: ImageItem[] = [
   { id: 44, src: "/Assets/Thumbnail/44.jpg", alt: "Portfolio Thumbnail Image 44" },
   { id: 45, src: "/Assets/Thumbnail/45.jpg", alt: "Portfolio Thumbnail Image 45" },
   { id: 46, src: "/Assets/Thumbnail/46.jpg", alt: "Portfolio Thumbnail Image 46" },
+  { id: 47, src: "/Assets/Thumbnail/47.jpg", alt: "Portfolio Thumbnail Image 41" },
+  { id: 48, src: "/Assets/Thumbnail/48.jpg", alt: "Portfolio Thumbnail Image 42" },
+  { id: 49, src: "/Assets/Thumbnail/49.jpg", alt: "Portfolio Thumbnail Image 43" },
+  { id: 50, src: "/Assets/Thumbnail/50.jpg", alt: "Portfolio Thumbnail Image 44" },
+  { id: 51, src: "/Assets/Thumbnail/51.jpg", alt: "Portfolio Thumbnail Image 45" },
+  { id: 52, src: "/Assets/Thumbnail/52.jpg", alt: "Portfolio Thumbnail Image 46" },
+  { id: 53, src: "/Assets/Thumbnail/53.jpg", alt: "Portfolio Thumbnail Image 45" },
+  { id: 54, src: "/Assets/Thumbnail/54.jpg", alt: "Portfolio Thumbnail Image 46" },
 ];
 
 /* ✅ Artwork Images (1–17) */
