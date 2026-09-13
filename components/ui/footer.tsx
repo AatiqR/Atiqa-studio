@@ -9,7 +9,6 @@ import {
   MapPin,
   Phone,
   CheckCircle,
-  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { Geist } from "next/font/google";
