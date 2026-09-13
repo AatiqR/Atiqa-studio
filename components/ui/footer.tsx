@@ -1,255 +1,1561 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { FaLinkedin, FaInstagram,} from "react-icons/fa";
-import type { IconType } from "react-icons";
-import { Mail, Phone, MapPin, ArrowRight, CheckCircle, ChevronRight, LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronRight,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  CheckCircle,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+import { Geist } from "next/font/google";
+import {
+  type CSSProperties,
+  type PointerEvent,
+  useEffect,
+  useRef,
+} from "react";
+
+const geist = Geist({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const whatsappUrl =
+  "https://wa.me/923062775191?text=Hi%20Atiqa%2C%20I%20want%20to%20work%20with%20you!";
+
+const services = [
+  "YouTube Thumbnail Design",
+  "Poster & Social Media Design",
+  "Brand Identity Design",
+  "Menu & Packaging Design",
+];
+
+const achievements = [
+  "100+ Creative Projects Completed",
+  "High CTR Thumbnail Specialist",
+  "Fast Delivery & Premium Quality",
+];
+
+const socialLinks = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/aatiqar.creative",
+    icon: Instagram,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/aatiqa-rana-1632a1282/",
+    icon: Linkedin,
+  },
+];
+
+const metrics = [
+  {
+    value: "100+",
+    label: "Creative Projects",
+  },
+  {
+    value: "CTR",
+    label: "Focused Design",
+  },
+  {
+    value: "24–48h",
+    label: "Fast Delivery",
+  },
+];
+
+type PointerPosition = {
+  element: HTMLElement;
+  x: number;
+  y: number;
+};
 
 type ContactInfoProps = {
   icon: LucideIcon;
+  label: string;
   text: string;
+  href?: string;
 };
 
-interface SocialIconProps {
-  icon: IconType;
-  name: string;
-  url: string;
-}
-
 export default function Footer() {
-  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const pointerRef = useRef<PointerPosition | null>(null);
+  const frameRef = useRef<number | null>(null);
 
   useEffect(() => {
-    setIsVisible(true);
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
+
+    if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+      section.classList.add("is-visible");
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          section.classList.add("is-visible");
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.08,
+      },
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
   }, []);
 
-  /* ✅ Social Links */
-  const socialLinks: SocialIconProps[] = [
-    { name: "Instagram", icon: FaInstagram, url: "https://www.instagram.com/aatiqar.creative" },
-    // { name: "TikTok", icon: FaTiktok, url: "https://tiktok.com/@mazvideoediting" },
-    // { name: "Facebook", icon: FaFacebook, url: "https://facebook.com/abdullahsince1997" },
-    { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com/in/aatiqa-rana-1632a1282/" },
-    // { name: "YouTube", icon: FaYoutube, url: "https://youtube.com/@MAZDigitalServices" },
-    // { name: "Twitter", icon: FaTwitter, url: "https://twitter.com/yourusername" },
-  ];
+  useEffect(() => {
+    return () => {
+      if (frameRef.current !== null) {
+        cancelAnimationFrame(frameRef.current);
+      }
+    };
+  }, []);
+
+  const handlePointerMove = (
+    event: PointerEvent<HTMLElement>,
+  ) => {
+    if (event.pointerType !== "mouse") return;
+
+    const element = event.currentTarget;
+    const bounds = element.getBoundingClientRect();
+
+    if (!bounds.width || !bounds.height) return;
+
+    pointerRef.current = {
+      element,
+      x: event.clientX - bounds.left,
+      y: event.clientY - bounds.top,
+    };
+
+    if (frameRef.current !== null) return;
+
+    frameRef.current = requestAnimationFrame(() => {
+      const position = pointerRef.current;
+
+      if (position) {
+        position.element.style.setProperty(
+          "--mouse-x",
+          `${position.x}px`,
+        );
+
+        position.element.style.setProperty(
+          "--mouse-y",
+          `${position.y}px`,
+        );
+      }
+
+      frameRef.current = null;
+    });
+  };
+
+  const handlePointerLeave = (
+    event: PointerEvent<HTMLElement>,
+  ) => {
+    if (event.pointerType !== "mouse") return;
+
+    event.currentTarget.style.setProperty(
+      "--mouse-x",
+      "50%",
+    );
+
+    event.currentTarget.style.setProperty(
+      "--mouse-y",
+      "50%",
+    );
+  };
+
+  const year = new Date().getFullYear();
 
   return (
-<footer
-  id="Contact"
-  className="bg-black text-white pt-16 pb-8 px-4 md:px-8 relative overflow-hidden"
->
-  {/* Background Glow */}
-  <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-    <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-[#120006] opacity-95"></div>
+    <footer
+      ref={sectionRef}
+      id="Contact"
+      aria-labelledby="footer-heading"
+      className={`creative-footer ${geist.className}`}
+    >
+      {/* Background atmosphere */}
+      <div
+        className="footer-atmosphere"
+        aria-hidden="true"
+      />
 
-    <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#39FF14] opacity-[0.08] blur-[150px] rounded-full animate-pulse"></div>
+      <div
+        className="footer-grid"
+        aria-hidden="true"
+      />
 
-    <div
-      className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-[#39FF14] opacity-[0.05] blur-[120px] rounded-full animate-pulse"
-      style={{ animationDelay: "1s" }}
-    ></div>
-  </div>
+      <div
+        className="footer-glow footer-glow-one"
+        aria-hidden="true"
+      />
 
-  <div
-    className={`max-w-7xl mx-auto relative z-10 transition-all duration-1000 ease-out ${
-      isVisible
-        ? "opacity-100 translate-y-0"
-        : "opacity-0 translate-y-10"
-    }`}
-  >
-    {/* Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+      <div
+        className="footer-glow footer-glow-two"
+        aria-hidden="true"
+      />
 
-      {/* About */}
-      <div className="lg:col-span-5 bg-gradient-to-br from-black/70 to-[#180008]/40 p-6 rounded-2xl border border-gray-800/50 shadow-2xl backdrop-blur-sm">
+      <div className="footer-shell">
+        {/* Main CTA */}
+        <section className="cta-panel">
+          <div
+            className="cta-orb"
+            aria-hidden="true"
+          />
 
-        <div className="flex items-center mb-5">
-          <div className="w-14 h-14 bg-[#39FF14] rounded-xl flex items-center justify-center mr-4 shadow-[0_0_30px_rgba(255,45,85,0.5)]">
-            <span className="text-white font-black text-2xl">AR</span>
-          </div>
+          <div
+            className="cta-line"
+            aria-hidden="true"
+          />
 
-          <div>
-            <h3 className="text-white text-2xl font-bold">
-              Atiqa Rana
-            </h3>
+          <div className="cta-content">
+            <div className="cta-copy">
+              <p className="eyebrow">
+                <span aria-hidden="true" />
+                LET&apos;S CREATE SOMETHING GREAT
+              </p>
 
-            <p className="text-[#39FF14] text-sm font-medium">
-              Graphic & Thumbnail Designer
-            </p>
-          </div>
-        </div>
+              <h2 id="footer-heading">
+                Ready To Make Your Brand
+                <span>Stand Out?</span>
+              </h2>
 
-        <p className="text-gray-300 mb-6 leading-relaxed text-[15px]">
-          I create high-converting YouTube thumbnails, posters,
-          social media graphics, branding visuals, menus, and
-          creative designs that help creators and businesses
-          grab attention, increase engagement, and grow faster online.
-        </p>
+              <p>
+                Let&apos;s create scroll-stopping thumbnails
+                and premium visuals that attract attention,
+                increase engagement, and help your brand grow
+                faster.
+              </p>
+            </div>
 
-        {/* Achievements */}
-        <div className="flex flex-col space-y-3 mb-6">
-          {[
-            "100+ Creative Projects Completed",
-            "High CTR Thumbnail Specialist",
-            "Fast Delivery & Premium Quality",
-          ].map((text, idx) => (
-            <div
-              key={idx}
-              className="flex items-center p-3 rounded-xl bg-black/40 border border-gray-800/50 transition-all duration-300 hover:border-[#39FF14]/60 hover:bg-black/60 group"
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button"
             >
-              <div className="w-8 h-8 rounded-full bg-black/50 border border-gray-800 flex items-center justify-center mr-3 group-hover:border-[#39FF14]/70 transition-all duration-300">
-                <CheckCircle className="text-[#39FF14] w-4 h-4" />
+              <span>Chat on WhatsApp</span>
+
+              <span
+                className="cta-icon"
+                aria-hidden="true"
+              >
+                <ArrowRight />
+              </span>
+            </a>
+          </div>
+        </section>
+
+        {/* Main footer content */}
+        <div className="footer-main">
+          {/* About */}
+          <section
+            className="about-column"
+            aria-label="About Atiqa Rana"
+          >
+            <div className="brand-header">
+              <div className="brand-mark">
+                <span>AR</span>
               </div>
 
-              <span className="text-white text-sm group-hover:text-[#39FF14] transition-colors duration-300">
-                {text}
-              </span>
+              <div>
+                <h3>Atiqa Rana</h3>
+                <p>
+                  Graphic &amp; Thumbnail Designer
+                </p>
+              </div>
             </div>
-          ))}
+
+            <p className="about-text">
+              I create high-converting YouTube thumbnails,
+              posters, social media graphics, branding
+              visuals, menus, and creative designs that help
+              creators and businesses grab attention,
+              increase engagement, and grow faster online.
+            </p>
+
+            {/* Achievements */}
+            <div className="achievement-list">
+              {achievements.map((text, index) => (
+                <div
+                  className="achievement"
+                  key={text}
+                  style={
+                    {
+                      "--achievement-delay": `${index * 80}ms`,
+                    } as CSSProperties
+                  }
+                >
+                  <span className="achievement-icon">
+                    <CheckCircle
+                      aria-hidden="true"
+                    />
+                  </span>
+
+                  <span>{text}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Metrics */}
+            <div className="metrics-grid">
+              {metrics.map((metric) => (
+                <div
+                  className="metric"
+                  key={metric.label}
+                  onPointerMove={handlePointerMove}
+                  onPointerLeave={handlePointerLeave}
+                >
+                  <div
+                    className="metric-light"
+                    aria-hidden="true"
+                  />
+
+                  <strong>{metric.value}</strong>
+                  <span>{metric.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Socials */}
+            <nav
+              className="socials"
+              aria-label="Social profiles"
+            >
+              {socialLinks.map(
+                ({ name, href, icon: Icon }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                    className="social-link"
+                  >
+                    <span
+                      className="social-glow"
+                      aria-hidden="true"
+                    />
+
+                    <span className="social-button">
+                      <Icon
+                        aria-hidden="true"
+                        strokeWidth={1.7}
+                      />
+                    </span>
+                  </a>
+                ),
+              )}
+            </nav>
+          </section>
+
+          {/* Services */}
+          <nav
+            className="services-column"
+            aria-label="Design services"
+          >
+            <p className="column-label">
+              MY SERVICES
+            </p>
+
+            <h3>
+              Creative
+              <span> Expertise</span>
+            </h3>
+
+            <ul className="services-list">
+              {services.map((service, index) => (
+                <li key={service}>
+                  <a href="#Projects">
+                    <span className="service-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <span className="service-name">
+                      {service}
+                    </span>
+
+                    <ChevronRight
+                      className="service-arrow"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Contact */}
+          <section
+            className="contact-column"
+            aria-labelledby="contact-heading"
+          >
+            <p className="column-label">
+              GET IN TOUCH
+            </p>
+
+            <h3 id="contact-heading">
+              Let&apos;s Talk
+              <span> Design</span>
+            </h3>
+
+            <p className="contact-intro">
+              Have a project, channel, brand, or creative
+              idea in mind? Let&apos;s turn it into something
+              people can&apos;t ignore.
+            </p>
+
+            <div className="contact-list">
+              <ContactInfo
+                icon={Phone}
+                label="Phone"
+                text="+92 306 2775191"
+                href="tel:+923062775191"
+              />
+
+              <ContactInfo
+                icon={Mail}
+                label="Email"
+                text="aasdrana18@gmail.com"
+                href="mailto:aasdrana18@gmail.com"
+              />
+
+              <ContactInfo
+                icon={MapPin}
+                label="Location"
+                text="Karachi, Pakistan"
+              />
+            </div>
+          </section>
         </div>
 
-        {/* Social Icons */}
-        <div className="flex flex-wrap gap-3">
-          {socialLinks.map((social) => (
-            <SocialIcon
-              key={social.name}
-              name={social.name}
-              icon={social.icon}
-              url={social.url}
-            />
-          ))}
+        {/* Bottom */}
+        <div className="footer-bottom">
+          <p>
+            © {year}{" "}
+            <span>Atiqa Rana</span>. All rights reserved.
+          </p>
+
+          <div className="legal-links">
+            <a href="#privacy">
+              Privacy Policy
+              <ChevronRight aria-hidden="true" />
+            </a>
+
+            <a href="#terms">
+              Terms of Service
+              <ChevronRight aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Services */}
-      <div className="lg:col-span-3 bg-gradient-to-br from-black/70 to-[#180008]/40 p-6 rounded-2xl border border-gray-800/50 shadow-2xl backdrop-blur-sm">
+      <style jsx>{`
+        .creative-footer {
+          --green: #39ff14;
+          --green-soft: rgba(57, 255, 20, 0.1);
+          --green-glow: rgba(57, 255, 20, 0.18);
 
-        <h2 className="text-white text-xl font-bold mb-5 pb-2 border-b border-gray-800 inline-block">
-          My <span className="text-[#39FF14]">Services</span>
-        </h2>
+          position: relative;
+          isolation: isolate;
+          overflow: hidden;
+          background: #000;
+          color: #fff;
+          padding: clamp(4rem, 8vw, 7rem)
+            clamp(1rem, 4vw, 4rem) 1.5rem;
 
-        <div className="space-y-4">
-          <FooterLink href="#Projects" text="YouTube Thumbnail Design" />
-          <FooterLink href="#Projects" text="Poster & Social Media Design" />
-          <FooterLink href="#Projects" text="Brand Identity Design" />
-          <FooterLink href="#Projects" text="Menu & Packaging Design" />
-        </div>
-      </div>
+          opacity: 0;
+          transform: translate3d(0, 18px, 0);
+          transition:
+            opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+            transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-      {/* Contact / CTA */}
-      <div className="lg:col-span-4 bg-gradient-to-br from-black/80 to-[#180008]/50 p-6 rounded-2xl border border-gray-800/50 shadow-2xl backdrop-blur-sm">
+        .creative-footer.is-visible {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
 
-        <h3 className="text-white text-xl font-bold mb-4">
-          Ready To Make Your Brand
-          <span className="text-[#39FF14]"> Stand Out?</span>
-        </h3>
+        .footer-atmosphere {
+          position: absolute;
+          inset: 0;
+          z-index: -5;
+          pointer-events: none;
+          background:
+            radial-gradient(
+              ellipse 45% 35% at 50% 0%,
+              rgba(57, 255, 20, 0.065),
+              transparent 72%
+            ),
+            linear-gradient(
+              180deg,
+              #000 0%,
+              #020402 48%,
+              #000 100%
+            );
+        }
 
-        <p className="text-gray-300 text-sm leading-relaxed mb-6">
-          Let’s create scroll-stopping thumbnails and premium
-          visuals that attract attention and grow your brand faster.
-        </p>
+        .footer-grid {
+          position: absolute;
+          inset: 0;
+          z-index: -4;
+          pointer-events: none;
+          opacity: 0.28;
+          background-image:
+            linear-gradient(
+              rgba(255, 255, 255, 0.018) 1px,
+              transparent 1px
+            ),
+            linear-gradient(
+              90deg,
+              rgba(255, 255, 255, 0.018) 1px,
+              transparent 1px
+            );
+          background-size: 70px 70px;
+          mask-image: linear-gradient(
+            to bottom,
+            black,
+            transparent 75%
+          );
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            black,
+            transparent 75%
+          );
+        }
 
-        <a
-          href="https://wa.me/923062775191?text=Hi%20Atiqa,%20I%20want%20to%20work%20with%20you!"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex items-center justify-between bg-[#39FF14] hover:bg-[#ff1744] text-white font-semibold rounded-xl px-5 py-4 transition-all duration-300 w-full mb-6 shadow-[0_0_25px_rgba(255,45,85,0.45)] hover:shadow-[0_0_35px_rgba(255,45,85,0.7)]"
-        >
-          <span>Chat on WhatsApp</span>
+        .footer-glow {
+          position: absolute;
+          z-index: -3;
+          pointer-events: none;
+          border-radius: 999px;
+          filter: blur(100px);
+          background: var(--green);
+          opacity: 0.035;
+          animation: floating-glow 8s ease-in-out infinite;
+        }
 
-          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </a>
+        .footer-glow-one {
+          width: 28rem;
+          height: 28rem;
+          top: -15rem;
+          right: -8rem;
+        }
 
-        <div className="space-y-3 mt-5">
+        .footer-glow-two {
+          width: 22rem;
+          height: 22rem;
+          bottom: 8rem;
+          left: -12rem;
+          opacity: 0.025;
+          animation-delay: -3s;
+        }
 
-          <ContactInfo icon={Phone} text="+92 306 2775191" />
+        .footer-shell {
+          position: relative;
+          max-width: 84rem;
+          margin: 0 auto;
+        }
 
-          <ContactInfo
-            icon={Mail}
-            text="aasdrana18@gmail.com"
-          />
+        /* CTA */
 
-          <ContactInfo
-            icon={MapPin}
-            text="Karachi, Pakistan"
-          />
-        </div>
-      </div>
-    </div>
+        .cta-panel {
+          position: relative;
+          overflow: hidden;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: clamp(1.4rem, 3vw, 2.2rem);
+          background:
+            linear-gradient(
+              135deg,
+              rgba(255, 255, 255, 0.075),
+              rgba(255, 255, 255, 0.018) 50%,
+              rgba(57, 255, 20, 0.035)
+            );
+          box-shadow:
+            0 30px 90px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          padding: clamp(2rem, 5vw, 4rem);
+        }
 
-    {/* Bottom */}
-    <div className="border-t border-gray-800/50 pt-6 flex flex-col md:flex-row justify-between items-center">
+        .cta-panel::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background:
+            radial-gradient(
+              400px circle at 85% 20%,
+              rgba(57, 255, 20, 0.1),
+              transparent 65%
+            );
+        }
 
-      <p className="text-gray-400 text-sm mb-4 md:mb-0">
-        © Copyright {new Date().getFullYear()}{" "}
-        <span className="text-[#39FF14] font-semibold">
-          Atiqa Rana
+        .cta-panel::after {
+          content: "";
+          position: absolute;
+          inset: -1px;
+          pointer-events: none;
+          border-radius: inherit;
+          background:
+            linear-gradient(
+              110deg,
+              transparent 15%,
+              rgba(57, 255, 20, 0.4),
+              transparent 35%
+            );
+          opacity: 0.18;
+          transform: translateX(-100%);
+          animation: border-sweep 8s ease-in-out infinite;
+        }
+
+        .cta-orb {
+          position: absolute;
+          width: 18rem;
+          height: 18rem;
+          right: -7rem;
+          top: -8rem;
+          border-radius: 50%;
+          background: var(--green);
+          opacity: 0.055;
+          filter: blur(50px);
+          pointer-events: none;
+        }
+
+        .cta-line {
+          position: absolute;
+          top: 0;
+          left: 10%;
+          right: 10%;
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.22),
+            transparent
+          );
+        }
+
+        .cta-content {
+          position: relative;
+          z-index: 1;
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: end;
+          gap: 3rem;
+        }
+
+        .eyebrow {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.65rem;
+          margin: 0 0 1.2rem;
+          color: var(--green);
+          font-size: 0.68rem;
+          font-weight: 700;
+          letter-spacing: 0.22em;
+          line-height: 1.4;
+          text-shadow: 0 0 18px
+            rgba(57, 255, 20, 0.35);
+        }
+
+        .eyebrow span {
+          width: 2rem;
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            var(--green)
+          );
+          box-shadow: 0 0 10px
+            rgba(57, 255, 20, 0.5);
+        }
+
+        .cta-copy h2 {
+          max-width: 48rem;
+          margin: 0;
+          font-size: clamp(
+            2.8rem,
+            6vw,
+            5.8rem
+          );
+          font-weight: 700;
+          letter-spacing: -0.065em;
+          line-height: 0.94;
+          text-wrap: balance;
+        }
+
+        .cta-copy h2 span {
+          display: block;
+          color: var(--green);
+          text-shadow:
+            0 0 18px rgba(57, 255, 20, 0.3),
+            0 0 50px rgba(57, 255, 20, 0.1);
+        }
+
+        .cta-copy > p:last-child {
+          max-width: 39rem;
+          margin: 1.5rem 0 0;
+          color: #9ca3af;
+          font-size: clamp(
+            0.95rem,
+            1.5vw,
+            1.08rem
+          );
+          line-height: 1.7;
+        }
+
+        .cta-button {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.5rem;
+          width: 17rem;
+          min-height: 4rem;
+          overflow: hidden;
+          flex-shrink: 0;
+          padding: 0.75rem 0.85rem 0.75rem
+            1.35rem;
+          border: 1px solid
+            rgba(170, 255, 153, 0.7);
+          border-radius: 1.15rem;
+          background:
+            linear-gradient(
+              180deg,
+              #59ff38 0%,
+              #39ff14 100%
+            );
+          color: #031500;
+          font-size: 0.92rem;
+          font-weight: 700;
+          text-decoration: none;
+          box-shadow:
+            0 14px 35px
+              rgba(57, 255, 20, 0.16),
+            inset 0 1px 0
+              rgba(255, 255, 255, 0.6),
+            inset 0 -2px 0
+              rgba(20, 100, 10, 0.25);
+          transition:
+            transform 0.45s
+              cubic-bezier(0.16, 1, 0.3, 1),
+            box-shadow 0.45s ease;
+        }
+
+        .cta-button::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -70%;
+          width: 45%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.5),
+            transparent
+          );
+          transform: skewX(-20deg);
+          transition: left 0.7s ease;
+        }
+
+        .cta-button:hover {
+          transform: translate3d(0, -5px, 0)
+            scale(1.015);
+          box-shadow:
+            0 20px 45px
+              rgba(57, 255, 20, 0.27),
+            inset 0 1px 0
+              rgba(255, 255, 255, 0.65),
+            inset 0 -2px 0
+              rgba(20, 100, 10, 0.25);
+        }
+
+        .cta-button:hover::before {
+          left: 130%;
+        }
+
+        .cta-button:focus-visible {
+          outline: none;
+          box-shadow:
+            0 0 0 2px #000,
+            0 0 0 4px var(--green),
+            0 20px 45px
+              rgba(57, 255, 20, 0.25);
+        }
+
+        .cta-icon {
+          display: grid;
+          place-items: center;
+          width: 2.6rem;
+          height: 2.6rem;
+          border-radius: 0.8rem;
+          background: rgba(0, 0, 0, 0.12);
+        }
+
+        .cta-icon :global(svg) {
+          width: 1.1rem;
+          height: 1.1rem;
+          transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover
+          .cta-icon :global(svg) {
+          transform: translateX(3px);
+        }
+
+        /* Main content */
+
+        .footer-main {
+          display: grid;
+          grid-template-columns:
+            minmax(0, 1.45fr)
+            minmax(0, 0.85fr)
+            minmax(0, 1fr);
+          gap: clamp(2rem, 5vw, 5rem);
+          padding: clamp(3rem, 6vw, 5.5rem) 0;
+          border-bottom: 1px solid
+            rgba(255, 255, 255, 0.08);
+        }
+
+        .brand-header {
+          display: flex;
+          align-items: center;
+          gap: 0.9rem;
+        }
+
+        .brand-mark {
+          position: relative;
+          display: grid;
+          place-items: center;
+          width: 3.5rem;
+          height: 3.5rem;
+          flex-shrink: 0;
+          overflow: hidden;
+          border: 1px solid
+            rgba(57, 255, 20, 0.55);
+          border-radius: 1rem;
+          background:
+            linear-gradient(
+              145deg,
+              #4cff2b,
+              #24d90a
+            );
+          color: #031500;
+          box-shadow:
+            0 10px 25px
+              rgba(57, 255, 20, 0.12),
+            inset 0 1px 0
+              rgba(255, 255, 255, 0.6);
+        }
+
+        .brand-mark::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.35),
+            transparent 55%
+          );
+          transform: translateX(-100%);
+          animation: brand-shine 5s ease-in-out
+            infinite;
+        }
+
+        .brand-mark span {
+          position: relative;
+          z-index: 1;
+          font-size: 1.15rem;
+          font-weight: 700;
+          letter-spacing: -0.05em;
+        }
+
+        .brand-header h3 {
+          margin: 0;
+          color: #fff;
+          font-size: 1.25rem;
+          font-weight: 700;
+          letter-spacing: -0.035em;
+        }
+
+        .brand-header p {
+          margin: 0.25rem 0 0;
+          color: var(--green);
+          font-size: 0.66rem;
+          font-weight: 700;
+          letter-spacing: 0.11em;
+          text-transform: uppercase;
+        }
+
+        .about-text {
+          max-width: 38rem;
+          margin: 1.4rem 0 1.5rem;
+          color: #92969d;
+          font-size: 0.94rem;
+          line-height: 1.75;
+        }
+
+        .achievement-list {
+          display: grid;
+          gap: 0.55rem;
+        }
+
+        .achievement {
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+          min-height: 3rem;
+          padding: 0.45rem 0.7rem;
+          border: 1px solid
+            rgba(255, 255, 255, 0.07);
+          border-radius: 0.85rem;
+          background: rgba(255, 255, 255, 0.025);
+          color: #d5d7da;
+          font-size: 0.78rem;
+          transition:
+            border-color 0.3s ease,
+            background 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        .achievement:hover {
+          border-color: rgba(57, 255, 20, 0.28);
+          background: rgba(57, 255, 20, 0.035);
+          transform: translateX(4px);
+        }
+
+        .achievement-icon {
+          display: grid;
+          place-items: center;
+          width: 1.9rem;
+          height: 1.9rem;
+          flex-shrink: 0;
+          border: 1px solid
+            rgba(57, 255, 20, 0.2);
+          border-radius: 50%;
+          background: rgba(57, 255, 20, 0.04);
+        }
+
+        .achievement-icon :global(svg) {
+          width: 0.95rem;
+          height: 0.95rem;
+          color: var(--green);
+          filter: drop-shadow(
+            0 0 5px
+              rgba(57, 255, 20, 0.35)
+          );
+        }
+
+        /* Metrics */
+
+        .metrics-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.55rem;
+          margin-top: 1.2rem;
+        }
+
+        .metric {
+          --mouse-x: 50%;
+          --mouse-y: 50%;
+          position: relative;
+          overflow: hidden;
+          min-width: 0;
+          padding: 0.9rem 0.7rem;
+          border: 1px solid
+            rgba(255, 255, 255, 0.07);
+          border-radius: 0.9rem;
+          background: rgba(255, 255, 255, 0.025);
+          transition:
+            transform 0.4s
+              cubic-bezier(0.16, 1, 0.3, 1),
+            border-color 0.4s ease,
+            background 0.4s ease;
+        }
+
+        .metric:hover {
+          transform: translateY(-3px);
+          border-color: rgba(57, 255, 20, 0.3);
+          background: rgba(57, 255, 20, 0.035);
+        }
+
+        .metric-light {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          opacity: 0;
+          background: radial-gradient(
+            100px circle at var(--mouse-x)
+              var(--mouse-y),
+            rgba(57, 255, 20, 0.11),
+            transparent 70%
+          );
+          transition: opacity 0.3s ease;
+        }
+
+        .metric:hover .metric-light {
+          opacity: 1;
+        }
+
+        .metric strong,
+        .metric span {
+          position: relative;
+          z-index: 1;
+          display: block;
+        }
+
+        .metric strong {
+          color: #fff;
+          font-size: 1.15rem;
+          font-weight: 700;
+          letter-spacing: -0.04em;
+        }
+
+        .metric:hover strong {
+          color: var(--green);
+          text-shadow: 0 0 12px
+            rgba(57, 255, 20, 0.25);
+        }
+
+        .metric span {
+          margin-top: 0.2rem;
+          color: #666b72;
+          font-size: 0.54rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          line-height: 1.4;
+          text-transform: uppercase;
+        }
+
+        /* Socials */
+
+        .socials {
+          display: flex;
+          gap: 0.65rem;
+          margin-top: 1.3rem;
+        }
+
+        .social-link {
+          position: relative;
+          display: block;
+          width: 2.9rem;
+          height: 2.9rem;
+          text-decoration: none;
+        }
+
+        .social-glow {
+          position: absolute;
+          inset: 0.2rem;
+          border-radius: 0.85rem;
+          background: var(--green);
+          filter: blur(12px);
+          opacity: 0;
+          transition: opacity 0.35s ease;
+        }
+
+        .social-button {
+          position: relative;
+          display: grid;
+          place-items: center;
+          width: 100%;
+          height: 100%;
+          border: 1px solid
+            rgba(255, 255, 255, 0.09);
+          border-radius: 0.85rem;
+          background: rgba(255, 255, 255, 0.035);
+          color: #858990;
+          transition:
+            transform 0.4s
+              cubic-bezier(0.16, 1, 0.3, 1),
+            border-color 0.3s ease,
+            background 0.3s ease,
+            color 0.3s ease;
+        }
+
+        .social-button :global(svg) {
+          width: 1.15rem;
+          height: 1.15rem;
+        }
+
+        .social-link:hover .social-glow {
+          opacity: 0.3;
+        }
+
+        .social-link:hover .social-button {
+          transform: translateY(-4px)
+            rotate(2deg);
+          border-color: rgba(57, 255, 20, 0.5);
+          background: rgba(57, 255, 20, 0.08);
+          color: var(--green);
+        }
+
+        .social-link:focus-visible {
+          outline: none;
+        }
+
+        .social-link:focus-visible
+          .social-button {
+          box-shadow:
+            0 0 0 2px #000,
+            0 0 0 4px var(--green);
+        }
+
+        /* Services / Contact */
+
+        .column-label {
+          margin: 0 0 0.65rem;
+          color: var(--green);
+          font-size: 0.64rem;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+        }
+
+        .services-column h3,
+        .contact-column h3 {
+          margin: 0;
+          color: #fff;
+          font-size: clamp(1.5rem, 2vw, 1.9rem);
+          font-weight: 700;
+          letter-spacing: -0.045em;
+          line-height: 1.1;
+        }
+
+        .services-column h3 span,
+        .contact-column h3 span {
+          color: var(--green);
+        }
+
+        .services-list {
+          margin: 1.5rem 0 0;
+          padding: 0;
+          list-style: none;
+          border-top: 1px solid
+            rgba(255, 255, 255, 0.08);
+        }
+
+        .services-list li {
+          border-bottom: 1px solid
+            rgba(255, 255, 255, 0.08);
+        }
+
+        .services-list a {
+          display: grid;
+          grid-template-columns: 1.8rem 1fr
+            auto;
+          align-items: center;
+          gap: 0.5rem;
+          min-height: 4rem;
+          color: #aeb1b6;
+          text-decoration: none;
+          transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        .services-list a:hover {
+          color: #fff;
+          transform: translateX(5px);
+        }
+
+        .service-number {
+          color: var(--green);
+          font-size: 0.58rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          opacity: 0.65;
+        }
+
+        .service-name {
+          font-size: 0.82rem;
+          line-height: 1.4;
+        }
+
+        .service-arrow {
+          width: 0.9rem;
+          height: 0.9rem;
+          color: var(--green);
+          opacity: 0.35;
+          transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+        }
+
+        .services-list a:hover
+          .service-arrow {
+          opacity: 1;
+          transform: translateX(3px);
+        }
+
+        .contact-intro {
+          margin: 1rem 0 1.3rem;
+          color: #858990;
+          font-size: 0.84rem;
+          line-height: 1.7;
+        }
+
+        .contact-list {
+          display: grid;
+          gap: 0.55rem;
+        }
+
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          min-height: 3.6rem;
+          padding: 0.55rem 0.65rem;
+          border: 1px solid
+            rgba(255, 255, 255, 0.07);
+          border-radius: 0.9rem;
+          background: rgba(255, 255, 255, 0.025);
+          color: inherit;
+          text-decoration: none;
+          transition:
+            transform 0.35s ease,
+            border-color 0.35s ease,
+            background 0.35s ease;
+        }
+
+        .contact-item:hover {
+          transform: translateX(4px);
+          border-color: rgba(57, 255, 20, 0.3);
+          background: rgba(57, 255, 20, 0.035);
+        }
+
+        .contact-icon {
+          display: grid;
+          place-items: center;
+          width: 2.25rem;
+          height: 2.25rem;
+          flex-shrink: 0;
+          border: 1px solid
+            rgba(57, 255, 20, 0.18);
+          border-radius: 0.7rem;
+          background: rgba(57, 255, 20, 0.04);
+          color: var(--green);
+        }
+
+        .contact-icon :global(svg) {
+          width: 0.95rem;
+          height: 0.95rem;
+        }
+
+        .contact-copy {
+          min-width: 0;
+        }
+
+        .contact-label {
+          display: block;
+          color: #555a61;
+          font-size: 0.52rem;
+          font-weight: 700;
+          letter-spacing: 0.13em;
+          text-transform: uppercase;
+        }
+
+        .contact-value {
+          display: block;
+          margin-top: 0.15rem;
+          overflow-wrap: anywhere;
+          color: #d8dade;
+          font-size: 0.75rem;
+          line-height: 1.4;
+          transition: color 0.3s ease;
+        }
+
+        .contact-item:hover .contact-value {
+          color: #fff;
+        }
+
+        /* Bottom */
+
+        .footer-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          padding: 1.5rem 0 0.4rem;
+        }
+
+        .footer-bottom p {
+          margin: 0;
+          color: #555960;
+          font-size: 0.68rem;
+          line-height: 1.5;
+        }
+
+        .footer-bottom p span {
+          color: var(--green);
+        }
+
+        .legal-links {
+          display: flex;
+          align-items: center;
+          gap: 1.3rem;
+        }
+
+        .legal-links a {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.15rem;
+          color: #555960;
+          font-size: 0.68rem;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+
+        .legal-links a :global(svg) {
+          width: 0.7rem;
+          height: 0.7rem;
+          color: var(--green);
+          opacity: 0;
+          transform: translateX(-3px);
+          transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        .legal-links a:hover {
+          color: #d0d2d5;
+        }
+
+        .legal-links a:hover
+          :global(svg) {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        @keyframes floating-glow {
+          0%,
+          100% {
+            transform: translate3d(0, 0, 0)
+              scale(1);
+          }
+
+          50% {
+            transform: translate3d(
+                0,
+                18px,
+                0
+              )
+              scale(1.05);
+          }
+        }
+
+        @keyframes border-sweep {
+          0%,
+          65% {
+            transform: translateX(-100%);
+          }
+
+          85%,
+          100% {
+            transform: translateX(100%);
+          }
+        }
+
+        @keyframes brand-shine {
+          0%,
+          65% {
+            transform: translateX(-100%);
+          }
+
+          85%,
+          100% {
+            transform: translateX(120%);
+          }
+        }
+
+        @media (max-width: 70rem) {
+          .footer-main {
+            grid-template-columns:
+              minmax(0, 1.2fr)
+              minmax(0, 0.8fr);
+          }
+
+          .about-column {
+            grid-column: 1 / -1;
+          }
+        }
+
+        @media (max-width: 58rem) {
+          .cta-content {
+            grid-template-columns: 1fr;
+            align-items: start;
+          }
+
+          .cta-button {
+            width: min(100%, 19rem);
+          }
+
+          .footer-main {
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem 2rem;
+          }
+
+          .about-column {
+            grid-column: 1 / -1;
+          }
+        }
+
+        @media (max-width: 42rem) {
+          .creative-footer {
+            padding-top: 4rem;
+            padding-inline: 1rem;
+          }
+
+          .cta-panel {
+            padding: 2rem 1.35rem;
+            border-radius: 1.35rem;
+          }
+
+          .eyebrow {
+            font-size: 0.59rem;
+            letter-spacing: 0.16em;
+          }
+
+          .cta-copy h2 {
+            font-size: clamp(
+              2.7rem,
+              13vw,
+              4.2rem
+            );
+          }
+
+          .cta-copy > p:last-child {
+            font-size: 0.9rem;
+          }
+
+          .cta-button {
+            width: 100%;
+          }
+
+          .footer-main {
+            grid-template-columns: 1fr;
+            gap: 2.8rem;
+            padding-block: 3rem;
+          }
+
+          .about-column {
+            grid-column: auto;
+          }
+
+          .metrics-grid {
+            gap: 0.4rem;
+          }
+
+          .metric {
+            padding: 0.75rem 0.5rem;
+          }
+
+          .metric strong {
+            font-size: 1rem;
+          }
+
+          .metric span {
+            font-size: 0.48rem;
+          }
+
+          .services-list a {
+            min-height: 3.7rem;
+          }
+
+          .footer-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 0.75rem;
+          }
+
+          .legal-links {
+            gap: 1rem;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .creative-footer,
+          .achievement,
+          .metric,
+          .social-button,
+          .contact-item,
+          .cta-button {
+            transition: none !important;
+            animation: none !important;
+          }
+
+          .creative-footer {
+            opacity: 1;
+            transform: none;
+          }
+
+          .footer-glow,
+          .cta-panel::after,
+          .brand-mark::after {
+            animation: none !important;
+          }
+        }
+      `}</style>
+    </footer>
+  );
+}
+
+function ContactInfo({
+  icon: Icon,
+  label,
+  text,
+  href,
+}: ContactInfoProps) {
+  const content = (
+    <>
+      <span className="contact-icon">
+        <Icon
+          aria-hidden="true"
+          strokeWidth={1.7}
+        />
+      </span>
+
+      <span className="contact-copy">
+        <span className="contact-label">
+          {label}
         </span>
-        . All rights reserved.
-      </p>
 
-      <div className="flex items-center space-x-6">
-        <FooterBottomLink text="Privacy Policy" />
-        <FooterBottomLink text="Terms of Service" />
-      </div>
-    </div>
-  </div>
-</footer>
+        <span className="contact-value">
+          {text}
+        </span>
+      </span>
+    </>
   );
-}
 
-/* Footer Reusable Components */
-function FooterLink({ href, text }: { href: string; text: string }) {
-  return (
-    <div>
-      <Link
+  if (href) {
+    return (
+      <a
         href={href}
-        className="text-gray-300 hover:text-white transition-all duration-300 relative group flex items-center"
+        className="contact-item"
       >
-        <ChevronRight className="w-4 h-4 mr-1 text-[#39FF14] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-        <span className="group-hover:translate-x-1 transition-transform duration-300">{text}</span>
-      </Link>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="contact-item">
+      {content}
     </div>
-  );
-}
-
-function SocialIcon({ icon: Icon, name, url }: SocialIconProps) {
-  return (
-    <Link
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={name}
-      className="relative group"
-    >
-      <div className="absolute inset-0 bg-[#39FF14] rounded-lg blur opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
-      <div className="relative w-10 h-10 rounded-full bg-black/40 border border-gray-800 group-hover:border-[#39FF14] flex items-center justify-center transition-all duration-300 shadow-lg transform group-hover:-translate-y-1">
-        <Icon className="w-6 h-6 text-gray-400 group-hover:text-[#39FF14] transition-colors duration-300" />
-      </div>
-    </Link>
-  );
-}
-
-function ContactInfo({ icon: Icon, text }: ContactInfoProps) {
-  return (
-    <div className="flex items-center p-2 rounded-lg bg-black/30 border border-gray-800/50 transition-all duration-300 hover:border-[#39FF14]/60 hover:bg-black/50 group">
-      <div className="mr-3 w-8 h-8 rounded-full bg-black/40 border border-gray-800 flex items-center justify-center flex-shrink-0 group-hover:border-[#39FF14]/70 transition-all duration-300">
-        <Icon className="text-[#39FF14] w-4 h-4" />
-      </div>
-      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">{text}</span>
-    </div>
-  );
-}
-
-function FooterBottomLink({ text }: { text: string }) {
-  return (
-    <Link
-      href="#"
-      className="text-gray-400 hover:text-white text-sm transition-colors flex items-center group"
-    >
-      <span>{text}</span>
-      <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-    </Link>
   );
 }
